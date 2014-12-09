@@ -4,11 +4,11 @@
 
 // - Generic rules
 .forms__input--pattern
-    color: $form-base-text-color
     border: none
-    background: $form-background-color
-    padding: 0.35em 1em
     outline: none
+    padding: 0.35em 1em
+    color: $form-base-text-color
+    background: $form-background-color
     +border-radius( 0.5em )
     &:focus
         background: $form-focus-background-color
@@ -16,9 +16,6 @@
 // - Specific rules
 .search
     position: relative
-
-.search__seek
-    width: 16em
 
 .search__validate
     position: absolute

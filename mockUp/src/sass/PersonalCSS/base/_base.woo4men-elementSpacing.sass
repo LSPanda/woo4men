@@ -2,17 +2,38 @@
 // Based on InuitCSS
 // By Simon Leyder -> https://github.com/LSPanda
 
-.alpha-spacing-for-element
-    display: block
-    content: ""
-    padding: 2.5em 0
+.alpha-spacing--after
+    &:after
+        display: block
+        content: ""
+        padding: 0.75em 0
 
-.beta-spacing-for-element
-    display: block
-    content: ""
-    padding: 1em 0
+.beta-spacing--after
+    &:after
+        display: block
+        content: ""
+        padding: 0.5em 0
 
-.gamma-spacing-for-element
-    display: block
-    content: ""
-    padding: 0.25em 0
+.gamma-spacing--after
+    &:after
+        display: block
+        content: ""
+        padding: 0.25em 0
+
+.alpha-spacing--before
+    &:before
+        display: block
+        content: ""
+        padding: 0.75em 0
+
+.beta-spacing--before
+    &:before
+        display: block
+        content: ""
+        padding: 0.5em 0
+
+.gamma-spacing--before
+    &:before
+        display: block
+        content: ""
+        padding: 0.25em 0

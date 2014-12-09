@@ -1,0 +1,22 @@
+// Style to my header for my web site project : Woo4Men
+// Based on InuitCSS
+// By Simon Leyder -> https://github.com/LSPanda
+
+.header__logo, .header__nav-menu
+    float: left
+
+.header__login-panier, .header__search
+    float: right
+    text-align: right
+
+.header__panier
+    position: relative
+    &:before
+        display: block
+        content: ""
+        width: 70px
+        height: 77px
+        background: url( "images/panier.png" )
+        position: absolute
+        top: 20px
+        left: -48px

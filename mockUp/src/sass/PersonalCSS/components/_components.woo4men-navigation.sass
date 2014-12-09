@@ -3,7 +3,7 @@
 // By Simon Leyder -> https://github.com/LSPanda
 
 // - Generic rules
-.navigation__heading
+.navigation__header
     font-size: 1.35em
     font-weight: 200
     text-decoration: none
@@ -11,6 +11,20 @@
     color: $heading-text-color
     +transition( all, 0.25s )
     padding-right: 0.75em
+    &:hover
+        color: $heading-text-color-hover
+
+.navigationElement__footer
+    &:after
+        content: "|"
+        padding: 0 0.5em
+
+.navigation__footer
+    font-size: 1.05em
+    font-weight: 500
+    text-decoration: none
+    color: $heading-text-color
+    +transition( all, 0.25s )
     &:hover
         color: $heading-text-color-hover
 

@@ -41,11 +41,11 @@ module.exports = function( grunt ) {
 		},
 		"watch": {
 			"styles": {
-				"files": [ "src/sass/*.sass" ],
+				"files": [ "src/sass/**/*.sass" ],
 				"tasks": [ "sass:styles" ]
 			},
 			"jades": {
-				"files": [ "src/jade/*.jade" ],
+				"files": [ "src/jade/**/*.jade" ],
 				"tasks": [ "jade:jades" ]
 			},
 			"scripts": {

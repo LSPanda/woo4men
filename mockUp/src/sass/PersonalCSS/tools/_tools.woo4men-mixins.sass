@@ -2,6 +2,15 @@
 // Based on InuitCSS
 // By Simon Leyder -> https://github.com/LSPanda
 
+//Add heading style
+@mixin headings($from: 1, $to: 6)
+	%base-heading
+		@content
+
+	@if $from >= 1 and $to <= 6
+		@for $i from $from through $to
+			h#{$i}
+				@extend %base-heading
 
 //Add prefix for `transition` rules
 =transition( $where, $times )
@@ -21,4 +30,5 @@
 =box-shadows( $angle, $blur, $color, $opa )
 	-webkit-box-shadow: $angle $angle $blur 0px rgba($color, $color, $color, $opa)
 	-moz-box-shadow:    $angle $angle $blur 0px rgba($color, $color, $color, $opa)
+	-ms-box-shadow:     $angle $angle $blur 0px rgba($color, $color, $color, $opa)
 	box-shadow:         $angle $angle $blur 0px rgba($color, $color, $color, $opa)

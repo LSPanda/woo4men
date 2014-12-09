@@ -1,37 +1,39 @@
 // - includes/header.jade
 
 header.header
-    div.header__logo
-        a(href="index.html")
-            img(src="css/images/logoNoel.png", alt="Logo spécial Noël de Woo4men")
-        h1 Woo4men, vente de vêtement en ligne
-    div.header__login-panier
-        div.header__login
-            p
-                | Bienvenue, 
-                a(href="#") connecter vous !
-        div.header__panier
-            div.panier__image
-                img(src="css/images/panier.png", alt="Image du panier d'achat de woo4men")
-            div.panier__text
+    div.header__logo-login-panier.clearfix
+        div.header__logo
+            a(href="index.html")
+                img(src="css/images/logoNoel.png", alt="Logo spécial Noël de Woo4men")
+            h1.woo4menHidden Woo4men, vente de vêtement en ligne
+        div.header__login-panier
+            div.header__login
                 p
-                    span 0 
-                    | article(s) - 
-                    span 0,00 €
-                a(href="#") Commander maintenant
-    nav.header__nav-menu
-        h2 Menu de navigation de Woo4men
-        span.nav-menu__list-item
-            a(href="#").nav-menu__link Accueil
-        span.nav-menu__list-item
-            a(href="#").nav-menu__link Homme
-        span.nav-menu__list-item
-            a(href="#").nav-menu__link Femme
-        span.nav-menu__list-item
-            a(href="#").nav-menu__link Point de vente
-        span.nav-menu__list-item
-            a(href="#").nav-menu__link Contact
-    div.header__search
-        form.search
-            input(type="text", placeholder="Rechercher...").search__seek
-            input(type="submit", value="Rechercher un article sur Woo4men").search.validate
+                    | Bienvenue, 
+                    a(href="#") connecter vous.
+            div.header__panier.flag
+                div.panier__image.flag__img
+                    img(src="css/images/panier.png", alt="Image du panier d'achat de woo4men")
+                div.panier__text.flag__body
+                    p
+                        span 0 
+                        | article(s) - 
+                        span 0,00 €
+                    a(href="#") Commander maintenant
+    div.header__nav-menu-search.clearfix
+        nav.header__nav-menu
+            h2.woo4menHidden Menu de navigation de Woo4men
+            span.nav-menu__list-item
+                a(href="#").nav-menu__link Accueil
+            span.nav-menu__list-item
+                a(href="#").nav-menu__link Homme
+            span.nav-menu__list-item
+                a(href="#").nav-menu__link Femme
+            span.nav-menu__list-item
+                a(href="#").nav-menu__link Point de vente
+            span.nav-menu__list-item
+                a(href="#").nav-menu__link Contact
+        div.header__search
+            form.search
+                input(type="text", placeholder="Rechercher...").search__seek
+                input(type="submit", value="Rechercher un article sur Woo4men").search.validate

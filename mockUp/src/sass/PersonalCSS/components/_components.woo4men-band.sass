@@ -3,9 +3,18 @@
 // By Simon Leyder -> https://github.com/LSPanda
 
 // - Generic rules
-.band--bottom:after
-    display: block
-    content: ""
-    width: 100%
-    height: 0.25em
-    background-color: $base-border-color
+.band--bottom
+    &:after
+        display: block
+        content: ""
+        width: 100%
+        height: 0.25em
+        background-color: $base-border-color
+
+.band--top
+    &:before
+        display: block
+        content: ""
+        width: 100%
+        height: 0.25em
+        background-color: $base-border-color

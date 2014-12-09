@@ -1,0 +1,31 @@
+// Forms style for my web site project : Woo4Men
+// Based on InuitCSS
+// By Simon Leyder -> https://github.com/LSPanda
+
+// - Generic rules
+.forms__input--pattern
+    color: $form-base-text-color
+    border: none
+    background: $form-background-color
+    padding: 0.35em 1em
+    outline: none
+    +border-radius( 0.5em )
+    &:focus
+        background: $form-focus-background-color
+
+// - Specific rules
+.search
+    position: relative
+
+.search__seek
+    width: 16em
+
+.search__validate
+    position: absolute
+    top: 0.3125em
+    right: 0.875em
+    width: 1.125em
+    height: 1.125em
+    text-indent: -100em
+    border: none
+    background: url( "images/search.png" ) no-repeat center

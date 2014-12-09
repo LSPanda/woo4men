@@ -1,0 +1,19 @@
+{
+    "name": "woo4men",
+    "version": "0.0.0",
+    "private": true,
+    "author": {
+        "name": "Simon",
+        "email": "sim.leyder@gmail.com",
+        "url": "http://portfolio.simon-leyder.be"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-jade": "^0.13.0",
+        "grunt-contrib-sass": "^0.8.1",
+        "grunt-contrib-uglify": "^0.6.0",
+        "grunt-contrib-watch": "^0.6.1"
+    },
+    "dependencies": {},
+    "description": "Christmas design for woo4men"
+}

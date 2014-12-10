@@ -28,7 +28,11 @@ module.exports = function( grunt ) {
 					},
 				},
 				"files": {
-					"bin/index.html": "src/jade/index.jade"
+					"bin/html/index.html": "src/jade/index.jade",
+					"bin/html/category.html": "src/jade/category.jade",
+					"bin/html/product.html": "src/jade/product.jade",
+					"bin/html/shop.html": "src/jade/shop.jade",
+					"bin/html/contact.html": "src/jade/contact.jade"
 				}
 			}
 		},

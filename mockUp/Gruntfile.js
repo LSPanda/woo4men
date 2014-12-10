@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
 		"sass": {
 			"styles": {
 		      "options": {
-		        "style": 'compressed'
+		        "style": 'nested'
 		      },
 		      "files": {
 		        "bin/css/screen.css": "src/sass/screen.sass"

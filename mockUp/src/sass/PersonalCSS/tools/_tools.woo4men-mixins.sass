@@ -13,7 +13,14 @@
 				@extend %base-heading
 
 //Convert px to rm with fallback
-@mixin rem($property, $values...)
+@mixin rem1( $property, $value )
+	@if $legacy-rem
+		#{$property}: $value
+
+	#{$property}: $value / $inuit-base-font-size * 1rem
+
+@mixin rem2($property, $values...)
+	$i: 0
 	$max: length($values)
 	$pxValues: ''
 	$remValues: ''

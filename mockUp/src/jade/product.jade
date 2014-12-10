@@ -5,5 +5,9 @@ extends layout
 block title
     title Woo4men - Notre produit
 
+block header
+    - var current = { product: 'focus' }
+    include includes/header.jade 
+
 block content
     include includes/product.jade

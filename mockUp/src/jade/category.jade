@@ -5,5 +5,9 @@ extends layout
 block title
     title Woo4men - Nos chemises   
 
+block header
+    - var current = { category: 'focus' }
+    include includes/header.jade 
+
 block content
     include includes/category.jade

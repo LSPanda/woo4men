@@ -5,5 +5,9 @@ extends layout
 block title
     title Woo4men - Nous contactez
 
+block header
+    - var current = { contact: 'focus' }
+    include includes/header.jade 
+
 block content
     include includes/contact.jade

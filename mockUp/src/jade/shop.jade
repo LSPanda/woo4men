@@ -5,5 +5,9 @@ extends layout
 block title
     title Woo4men - Nos magasins   
 
+block header
+    - var current = { shop: 'focus' }
+    include includes/header.jade 
+
 block content
     include includes/shop.jade

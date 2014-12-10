@@ -3,7 +3,11 @@
 extends layout
 
 block title
-    title Woo4men - Accueil   
+    title Woo4men - Accueil 
+
+block header
+    - var current = { accueil: 'focus' }
+    include includes/header.jade 
 
 block content
     include includes/accueil.jade

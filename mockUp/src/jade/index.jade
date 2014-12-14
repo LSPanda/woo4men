@@ -1,6 +1,6 @@
 // - index.html
 
-extends layout
+extends includes/layout
 
 block title
     title Woo4men - Accueil 
@@ -10,4 +10,19 @@ block header
     include includes/header.jade 
 
 block content
-    include includes/accueil.jade
+    section.beta-spacing--before.beta-spacing--after
+        h3.woo4menHidden Page d'accueil de Woo4men
+        div.gamma-spacing--after
+        div.one-whole
+            a(href="#")
+                img(src="../css/images/slide1.jpg", alt="Promotions spécial Noêl de Woo4men").one-whole
+        div
+            div.inline-block.one-third
+                a(href="#")
+                    img(src="../css/images/slideChemise.jpg", alt="Accès aux Chemises de Woo4men").one-whole
+            div.inline-block.one-third
+                a(href="#")
+                    img(src="../css/images/slidePolo.jpg", alt="Accès aux Polos de Woo4men").one-whole
+            div.inline-block.one-third
+                a(href="#")    
+                    img(src="../css/images/slidePull.jpg", alt="Accès aux Pulls de Woo4men").one-whole

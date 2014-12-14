@@ -4,24 +4,22 @@
 
 // General rules
 .article
+    position: relative
     display: inline-block
-    @include rem2(padding, 1.5, 1)
-
-    .article__title
-
-
-    .article__img
+    @include rem( min-height, 500px )
 
 
     .article__body
         text-align: center
-        margin-top: 1.25rem
+        @include rem( margin-top, 20px )
 
 .information
+
 
     .information__promo
         display: block
         float: left
+
 
     .information__price
         display: block

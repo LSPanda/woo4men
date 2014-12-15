@@ -4,13 +4,24 @@
 
 // - Generic rules
 .navigation__header
-    font-size: 1.35em
+    @include rem( font-size, 21.6px )
     font-weight: 200
     text-decoration: none
     text-transform: uppercase
     color: $heading-text-color
     +transition( all, 0.25s )
-    padding-right: 0.75em
+    @include rem( padding-right, 12px )
+    &:hover
+        color: $heading-text-color-hover
+
+.navigation__filtre
+    @include rem( font-size, 18.25px )
+    font-weight: 200
+    text-decoration: none
+    text-transform: capitalize
+    color: $heading-text-color
+    +transition( all, 0.25s )
+    @include rem( padding-right, 12px )
     &:hover
         color: $heading-text-color-hover
 

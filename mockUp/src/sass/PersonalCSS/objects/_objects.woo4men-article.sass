@@ -6,7 +6,8 @@
 .article
     position: relative
     display: inline-block
-    @include rem( min-height, 500px )
+    @include rem( min-height, 484px )
+    @include rem( max-height, 485px )
 
 
     .article__body
@@ -14,6 +15,11 @@
         @include rem( margin-top, 20px )
 
 .information
+    position: absolute
+    @include rem( right, 24px )
+    @include rem( bottom, 16px )
+    @include rem( left, 24px )
+    margin: auto
 
 
     .information__promo
@@ -24,4 +30,7 @@
     .information__price
         display: block
         float: right
+
+    .information__price--newPrice, .information__price--oldPrice
+        display: block
 // Specific rules

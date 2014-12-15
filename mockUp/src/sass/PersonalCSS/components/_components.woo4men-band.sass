@@ -8,7 +8,7 @@
         display: block
         content: ""
         width: 100%
-        height: 0.25em
+        @include rem( height, 4px )
         background-color: $base-border-color
 
 .band--top
@@ -16,5 +16,21 @@
         display: block
         content: ""
         width: 100%
-        height: 0.25em
+        @include rem( height, 4px )
+        background-color: $base-border-color
+
+.band__filtre--bottom
+    &:after
+        display: block
+        content: ""
+        width: 100%
+        @include rem( height, 8px )
+        background-color: $base-border-color
+
+.band__filtre--top
+    &:before
+        display: block
+        content: ""
+        width: 100%
+        @include rem( height, 8px )
         background-color: $base-border-color

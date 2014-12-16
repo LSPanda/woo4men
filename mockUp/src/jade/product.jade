@@ -10,25 +10,49 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
+    section.beta-spacing--before.beta-spacing--after.clearfix
         h3.woo4menHidden Page produit de Woo4men
-        section.product
+        section.product.eight-tenths
             div.product__image
                 div.image__main
-                    
+                    img(src="../css/images/chemise1.jpg", alt="Presentation d'une chemise")
                 div.image__three
-                    
+                    img(src="../css/images/chemise1.jpg", alt="Presentation d'une chemise")
+                    img(src="../css/images/chemise2.jpg", alt="Presentation d'une chemise")
+                    img(src="../css/images/chemise3.jpg", alt="Presentation d'une chemise")
             div.product__detail
                 div.detail__title
                     h3.delta Chemise
                 div.detail__body
                     p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque iusto blanditiis labore consequatur earum reiciendis tempore doloremque magnam harum nulla deserunt autem illo, corrupti minima maxime asperiores dolores, dolorum fugiat.
                 div.information__title
+                    h3.epsilon À savoir
                 div.information__body
+                    p
+                        span Coupe :&nbsp;
+                        | En carrée
+                    p
+                        span Matière :&nbsp;
+                        | 100% coton
+                    p
+                        span Référence :&nbsp;
+                        | 121432514535
                 div.size__title
+                    h3.epsilon Taille
                 div.size__choices
+                    span S
+                    span M
+                    span L
+                    span XL
+                    span XXL
                 div.size__forms
-        section.same
+                    form(action="#")
+                        input(type="text")
+                        div.forms-button
+                            a(href="#") +
+                            a(href="#") -
+                        input(type="submit")
+        section.same.two-tenths
             div.same__title
                 h3.delta Dans la même catégorie
                 - var numberItem = 0

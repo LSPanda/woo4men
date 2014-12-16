@@ -10,8 +10,11 @@ block header
     include includes/header.jade 
 
 block content
-    div.filtre__nav-menu.band__filtre--bottom.beta-spacing--before
-        div.beta-spacing--after
+    div.band__filtre--bottom
+        div.arrow
+            div.arrow-up__men--color
+            div.arrow-up__men--white
+        div.filter__nav-menu--men.gamma-spacing--after.gamma-spacing--before
             span
                 a(href="#").navigation__filtre.navigation__focus Chemises
             span
@@ -25,7 +28,7 @@ block content
         h3.woo4menHidden Page catégorie de Woo4men
         while numberItem < 8
             section.article.one-quarter
-                a(href="#").cleanLink
+                a(href="product.html").cleanLink
                     div.article__title
                         h1.gamma Jolie chemise
                     div.article__img

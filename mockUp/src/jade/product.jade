@@ -13,8 +13,32 @@ block content
     section.beta-spacing--before.beta-spacing--after
         h3.woo4menHidden Page produit de Woo4men
         section.product
-            div.product__title
-                h4.delta Information sur le produit
+            div.product__image
+                div.image__main
+                    
+                div.image__three
+                    
+            div.product__detail
+                div.detail__title
+                    h3.delta Chemise
+                div.detail__body
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque iusto blanditiis labore consequatur earum reiciendis tempore doloremque magnam harum nulla deserunt autem illo, corrupti minima maxime asperiores dolores, dolorum fugiat.
+                div.information__title
+                div.information__body
+                div.size__title
+                div.size__choices
+                div.size__forms
         section.same
             div.same__title
-                h4.delta Dans la même catégorie
+                h3.delta Dans la même catégorie
+                - var numberItem = 0
+                
+                while numberItem < 3
+                    section.article
+                        a(href="product.html").cleanLink
+                        div.article__title
+                            h4.gamma Chemise
+                        div.article__img
+                            img(src="../css/images/chemise.jpg", alt="Présentation d'une chemise")
+                    - numberItem++
+                    

@@ -6,13 +6,13 @@
 .article
     position: relative
     display: inline-block
-    @include rem( min-height, 454px )
-    @include rem( max-height, 455px )
+.article--size
+    @include rem( min-height, 444px )
+    @include rem( max-height, 445px )
 
-
-    .article__body
-        text-align: center
-        @include rem( margin-top, 20px )
+.article__body
+    text-align: center
+    @include rem( margin-top, 20px )
 
 .information
     position: absolute
@@ -21,16 +21,14 @@
     @include rem( left, 24px )
     margin: auto
 
+.information__promo
+    display: block
+    float: left
 
-    .information__promo
-        display: block
-        float: left
+.information__price
+    display: block
+    float: right
 
-
-    .information__price
-        display: block
-        float: right
-
-    .information__price--newPrice, .information__price--oldPrice
-        display: block
+.information__price--newPrice, .information__price--oldPrice
+    display: block
 // Specific rules

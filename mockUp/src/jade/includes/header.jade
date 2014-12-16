@@ -26,14 +26,19 @@ header.band--bottom
             else 
                 span
                     a(href="index.html").navigation__header Accueil
-            if current.category
+            if current.category1
                 span
-                    a(href="category.html").navigation__header.navigation__focus Homme
+                    a(href="category-men.html").navigation__header.navigation__focus Homme
             else
                 span
-                    a(href="category.html").navigation__header Homme
-            span
-                a(href="category.html").navigation__header Femme
+                    a(href="category-men.html").navigation__header Homme
+            if current.category2
+                span
+                    a(href="category-women.html").navigation__header.navigation__focus Femme
+            else
+                span
+                    a(href="category-women.html").navigation__header Femme
+                    
             if current.shop
                 span
                     a(href="shop.html").navigation__header.navigation__focus Point de vente

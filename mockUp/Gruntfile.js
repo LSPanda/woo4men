@@ -29,7 +29,14 @@ module.exports = function( grunt ) {
 				},
 				"files": {
 					"bin/html/index.html": "src/jade/index.jade",
-					"bin/html/category.html": "src/jade/category.jade",
+					"bin/html/category-men.html": "src/jade/category-men.jade",
+					"bin/html/category-men-chemise.html": "src/jade/category-men-chemise.jade",
+					"bin/html/category-men-polo.html": "src/jade/category-men-polo.jade",
+					"bin/html/category-men-pull.html": "src/jade/category-men-pull.jade",
+					"bin/html/category-women.html": "src/jade/category-women.jade",
+					"bin/html/category-women-chemise.html": "src/jade/category-women-chemise.jade",
+					"bin/html/category-women-polo.html": "src/jade/category-women-polo.jade",
+					"bin/html/category-women-pull.html": "src/jade/category-women-pull.jade",
 					"bin/html/product.html": "src/jade/product.jade",
 					"bin/html/shop.html": "src/jade/shop.jade",
 					"bin/html/contact.html": "src/jade/contact.jade"

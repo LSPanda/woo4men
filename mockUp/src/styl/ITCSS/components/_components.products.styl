@@ -1,0 +1,41 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS PRODUCTS
+//\*------------------------------------*/
+
+
+
+
+// - Style for my products
+.product
+    width 80%
+.product__detail
+    rem-fallback( padding, 0 24px )
+
+.body__list
+    rem-fallback( margin-bottom, 24px )
+.body__list--italic
+    font-style italic
+
+.size__choices
+    rem-fallback( margin, 20px 0 )
+.size__choices--button
+    rem-fallback( margin-right, 8px )
+    rem-fallback( padding, 8px 16px )
+    border 1px solid wf_border-filter
+    transition( all, 0.25s )
+    &:hover
+        color $third-text-color-hover
+        background wf_background-products
+        border 1px solid wf_border-separate
+.choice__button.focus
+    color $third-text-color-hover
+    background wf_background-products
+    border 1px solid wf_border-separate
+
+.same
+    width 20%

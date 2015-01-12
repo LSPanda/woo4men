@@ -2,7 +2,7 @@
 header.band--bottom
     div.alpha-spacing--after.clearfix
         div.header__logo
-            h1.woo4menHidden Woo4men, vente de vêtement en ligne
+            h1.hiddenTitle Woo4men, vente de vêtement en ligne
             if current.accueil
                 a(href="index.html")
                     img(src="css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
@@ -14,7 +14,7 @@ header.band--bottom
                 p
                     | Bienvenue, 
                     a(href="#").woo4menLink connectez-vous
-            div.header__panier.box--grey
+            div.header__panier.boxes--grey
                 p
                     span 0 
                     | article(s) - 
@@ -22,7 +22,7 @@ header.band--bottom
                 a(href="#").woo4menLink Commander maintenant
     div.beta-spacing--after.clearfix
         nav.header__nav-menu
-            h2.woo4menHidden Menu de navigation de Woo4men
+            h2.hiddenTitle Menu de navigation de Woo4men
             //- Add color to "Accueil" when focus
             if current.accueil
                 span
@@ -39,7 +39,7 @@ header.band--bottom
                     a(href="category-men.html").navigation__header.navigation__focus Homme
             else
                 span
-                    a(href="category-men.html").navigation__header Homme              
+                    a(href="category-men.html").navigation__header Homme
             //- Add color to "Femme" when focus & change link path
             if current.accueil
                 span

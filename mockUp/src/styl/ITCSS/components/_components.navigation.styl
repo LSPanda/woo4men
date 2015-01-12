@@ -1,0 +1,53 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS NAVIGATION
+//\*------------------------------------*/
+
+
+
+
+// - Style for my navigation
+.navigation__header
+    rem-fallback( font-size, 21.6px )
+    font-family wf_font-heading
+    color wf_nav-color
+    text-transform uppercase
+    text-decoration none
+    rem-fallback( padding-right, 12px )
+    transition( all, 0.25s )
+    &:hover
+        color wf_nav-color-hover
+
+.navigation__filtre
+    rem-fallback( font-size, 18.25px )
+    font-weight 200
+    color wf_nav-color
+    text-transform capitalize
+    text-decoration none
+    rem-fallback( padding-right, 12px )
+    transition( all, 0.25s )
+    &:hover
+        color wf_nav-color-hover
+
+.navigationElement__footer
+    &:after
+        content "|"
+        font-weight 300
+        rem-fallback( padding, 0 8px )
+
+.navigation__footer
+    rem-fallback( font-size, 16.8px )
+    font-family wf_font-heading
+    font-weight 300
+    color wf_nav-color
+    text-decoration none
+    transition( all, 0.25s )
+    &:hover
+        color wf_nav-color-hover
+
+.navigation__focus
+    color wf_nav-color-focus

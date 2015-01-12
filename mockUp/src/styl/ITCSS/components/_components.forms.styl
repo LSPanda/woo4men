@@ -1,0 +1,35 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS FORMS
+//\*------------------------------------*/
+
+
+
+
+// - Style for my forms
+.forms__input--pattern
+    color wf_form-color
+    background wf_form-background-color
+    rem-fallback( padding, 12px 16px )
+    border none
+    &:focus
+        background wf_form-background-color-focus
+
+.search
+    position relative
+.search__seek
+    rem-fallback( min-width, 265px )
+.search__validate
+    position: absolute
+    rem-fallback( width, 18px )
+    rem-fallback( height, 18px )
+    rem-fallback( top, 8px )
+    rem-fallback( right, 14px )
+    background wf_form-background-color url( "images/links/search.png" ) no-repeat center
+    rem-fallback( padding, 12px )
+    border none
+    rem-fallback( text-indent, 100000px )

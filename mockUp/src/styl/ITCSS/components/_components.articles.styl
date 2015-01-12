@@ -1,0 +1,32 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS ARTICLES
+//\*------------------------------------*/
+
+
+
+
+// - Style for my article
+.article
+    width 25%
+    rem-fallback( margin-bottom, 24px )
+    rem-fallback( padding, 12px 24px )
+    transition( all, 0.25s )
+    &:hover
+        background: wf_background-boxes
+.article__title
+    text-transform: capitalize
+
+.information__promo
+    rem-fallback( font-size, 34.269px )
+    color: wf_promo-color
+.information__price--newPrice
+    rem-fallback( font-size, 21.180px )
+.information__price--oldPrice
+    rem-fallback( font-size, 13.090px )
+    text-decoration: line-through
+    text-align: right

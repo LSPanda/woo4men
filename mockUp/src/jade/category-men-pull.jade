@@ -11,9 +11,9 @@ block header
 block content
     div.band__filtre--bottom
         div.arrow
-            div.arrow-up__men--color
-            div.arrow-up__men--white
-        div.filter__nav-menu--men.gamma-spacing--after.gamma-spacing--before
+            div.arrow-up--color
+            div.arrow-up--white
+        div.filter__nav-menu.gamma-spacing--after.gamma-spacing--before
             span
                 a(href="category-men-chemise.html").navigation__filtre Chemises
             span
@@ -24,23 +24,25 @@ block content
     - var numberItem = 0
     
     section.beta-spacing--before.beta-spacing--after
-        h3.woo4menHidden Page catégorie de Woo4men
+        h3.hiddenTitle Page catégorie de Woo4men
         while numberItem < 4
-            section.article.article--size.one-quarter
-                a(href="product.html").cleanLink
+            section.inline-block.article
+                a(href="product.html").removeLink
                     div.article__title
                         h4.gamma Pull
                     div.article__img
-                        img(src="../css/images/pull.jpg", alt="Présentation d'un pull").one-whole
+                        img(src="../css/images/mockUp/pull.jpg", alt="Présentation d'un pull").one-whole
                     div.article__body
                         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     div.information.clearfix
                         div.information__promo
                             span -10%
                         div.information__price
-                            span.information__price--newPrice 55,00 €    
-                            span.information__price--oldPrice 50,00 €    
+                            span.block.information__price--newPrice 55,00 €    
+                            span.block.information__price--oldPrice 50,00 €    
             - numberItem++
-                                        
+block footer
+    include includes/footer.jade
+                                            
 block script
     include includes/script.jade

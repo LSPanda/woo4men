@@ -10,18 +10,18 @@ block header
 
 block content
     section.beta-spacing--before.beta-spacing--after.clearfix
-        h3.woo4menHidden Page produit de Woo4men
-        section.product.eight-tenths
-            div.four-tenths.product__image
+        h3.hiddenTitle Page produit de Woo4men
+        section.inline-block.product
+            div.product__image
                 div.one-whole
-                    img(src="../css/images/chemise1.jpg", alt="Presentation d'une chemise").one-whole
+                    img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
                 div.inline-block.one-third
-                    img(src="../css/images/chemise1.jpg", alt="Presentation d'une chemise").one-whole
+                    img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
                 div.inline-block.one-third
-                    img(src="../css/images/chemise2.jpg", alt="Presentation d'une chemise").one-whole
+                    img(src="../css/images/mockUp/chemise2.jpg", alt="Presentation d'une chemise").one-whole
                 div.inline-block.one-third
-                    img(src="../css/images/chemise3.jpg", alt="Presentation d'une chemise").one-whole
-            div.six-tenths.product__detail
+                    img(src="../css/images/mockUp/chemise3.jpg", alt="Presentation d'une chemise").one-whole
+            div.product__detail
                 div.detail__title
                     h3.delta Chemise
                 div.detail__body
@@ -51,19 +51,30 @@ block content
                             a(href="#") +
                             a(href="#") -
                         input(type="submit")
-        section.same.two-tenths
+        section.inline-block.same
             div.same__title
                 h3.delta Dans la même catégorie
                 - var numberItem = 0
                 
                 while numberItem < 3
-                    section.article
-                        a(href="product.html").cleanLink
+                    section.block.article
+                        a(href="product.html").removeLink
                             div.article__title
                                 h4.gamma Chemise
                             div.article__img
-                                img(src="../css/images/chemise.jpg", alt="Présentation d'une chemise")
+                                img(src="../css/images/mockUp/chemise.jpg", alt="Présentation d'une chemise").one-whole
+                            div.article__body
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            div.information.clearfix
+                                div.information__promo
+                                    span -33%
+                                div.information__price
+                                    span.block.information__price--newPrice 33,50 €    
+                                    span.block.information__price--oldPrice 50,00 € 
                     - numberItem++
 
+block footer
+    include includes/footer.jade
+    
 block script
     include includes/script.jade                

@@ -1,0 +1,34 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS HEADER
+//\*------------------------------------*/
+
+
+
+
+// - Style for my header
+.header__logo, .header__nav-menu
+    float left
+
+.header__login-panier, .header__search
+    float right
+    text-align right
+
+.header__panier
+    position relative
+    rem-fallback( min-width, 265px )
+    &:before
+        content ""
+        display block
+        position absolute
+        rem-fallback( top, 20px )
+        rem-fallback( left, -24px )
+        rem-fallback( width, 70px )
+        rem-fallback( height, 77px )
+        width 4.375em
+        height 4.8125em
+        background url( "images/links/panier.png" )

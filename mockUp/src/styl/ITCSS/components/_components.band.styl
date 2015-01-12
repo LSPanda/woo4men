@@ -1,0 +1,39 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS BAND
+//\*------------------------------------*/
+
+
+
+
+// - Color band for my website
+.band--bottom
+    &:after
+        content ""
+        display block
+        width 100%
+        rem-fallback( height, 4px )
+        background-color wf_border-separate
+
+.band--top
+    &:before
+        content ""
+        display block
+        width 100%
+        rem-fallback( height, 4px )
+        background-color wf_border-separate
+
+.band__filtre--bottom
+    &:after
+        content ""
+        display block
+        width 100%
+        rem-fallback( height, 2px )
+        background-color wf_border-filter
+
+.band__product--left
+    border-left 2px solid wf_border-filter

@@ -1,11 +1,14 @@
-// - includes/header.jade
-
+//- includes/header.jade
 header.band--bottom
     div.alpha-spacing--after.clearfix
         div.header__logo
             h1.woo4menHidden Woo4men, vente de vêtement en ligne
-            a(href="index.html")
-                img(src="../css/images/logoNoel.png", alt="Logo spécial Noël de Woo4men")
+            if current.accueil
+                a(href="index.html")
+                    img(src="css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
+            else 
+                a(href="../index.html")
+                    img(src="../css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
         div.header__login-panier
             div.header__login
                 p
@@ -20,37 +23,54 @@ header.band--bottom
     div.beta-spacing--after.clearfix
         nav.header__nav-menu
             h2.woo4menHidden Menu de navigation de Woo4men
+            //- Add color to "Accueil" when focus
             if current.accueil
                 span
                     a(href="index.html").navigation__header.navigation__focus Accueil
             else 
                 span
-                    a(href="index.html").navigation__header Accueil
-            if current.category1
+                    a(href="../index.html").navigation__header Accueil
+            //- Add color to "Homme" when focus & change link path
+            if current.accueil
+                span
+                    a(href="html/category-men.html").navigation__header Homme
+            else if current.category1
                 span
                     a(href="category-men.html").navigation__header.navigation__focus Homme
             else
                 span
-                    a(href="category-men.html").navigation__header Homme
-            if current.category2
+                    a(href="category-men.html").navigation__header Homme              
+            //- Add color to "Femme" when focus & change link path
+            if current.accueil
+                span
+                    a(href="html/category-women.html").navigation__header Femme
+            else if current.category2
                 span
                     a(href="category-women.html").navigation__header.navigation__focus Femme
             else
                 span
                     a(href="category-women.html").navigation__header Femme
-                    
-            if current.shop
+            //- Add color to "Point de vente" when focus & change link path
+            if current.accueil
+                span
+                    a(href="html/shop.html").navigation__header Point de vente
+            else if current.shop
                 span
                     a(href="shop.html").navigation__header.navigation__focus Point de vente
-            else    
+            else
                 span
                     a(href="shop.html").navigation__header Point de vente
-            if current.contact    
+            //- Add color to "Contact" when focus & change link path
+            if current.accueil
+                span
+                    a(href="html/contact.html").navigation__header Contact
+            else if current.shop
                 span
                     a(href="contact.html").navigation__header.navigation__focus Contact
             else
                 span
                     a(href="contact.html").navigation__header Contact
+
         div.header__search
             form.search
                 input(type="text", placeholder="Rechercher...").search__seek.forms__input--pattern

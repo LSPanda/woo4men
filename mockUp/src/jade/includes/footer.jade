@@ -1,17 +1,37 @@
-// - includes/footer.jade
-
+//- includes/footer.jade
 footer.band--top
     h6.woo4menHidden Pied de page de Woo4men
     div.footer__nav-signature.beta-spacing--before
         div.footer__nav-menu
-            span.navigationElement__footer
-                a(href="#").navigation__footer Promotions
-            span.navigationElement__footer
-                a(href="#").navigation__footer Nouveaux produits
-            span.navigationElement__footer
-                a(href="#").navigation__footer Nos magasins
-            span
-                a(href="#").navigation__footer Contactez-nous
+            //- Change link path
+            if current.accueil
+                span.navigationElement__footer
+                    a(href="html/category-men.html").navigation__footer Promotions
+            else 
+                span.navigationElement__footer
+                    a(href="category-men.html").navigation__footer Promotions
+            //- Change link path
+            if current.accueil
+                span.navigationElement__footer
+                    a(href="html/category-men.html").navigation__footer Nouveaux produits
+            else 
+                span.navigationElement__footer
+                    a(href="category-men.html").navigation__footer Nouveaux produits
+            //- Change link path
+            if current.accueil
+                span.navigationElement__footer
+                    a(href="html/shop.html").navigation__footer Nos magasins
+            else 
+                span.navigationElement__footer
+                    a(href="shop.html").navigation__footer Nos magasins
+            //- Change link path
+            if current.accueil
+                span
+                    a(href="html/contact.html").navigation__footer Contactez-nous
+            else 
+                span
+                    a(href="contact.html").navigation__footer Contactez-nous
+                    
         div.footer__signature
             p 
                 | &copy; Designed by  

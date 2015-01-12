@@ -1,9 +1,11 @@
-// - index.html
-
+//- index.html
 extends includes/layout
 
 block title
     title Woo4men - Accueil 
+
+block style
+    link(rel="stylesheet" href="css/main.css")
 
 block header
     - var current = { accueil: 'focus' }
@@ -25,3 +27,6 @@ block content
             div.inline-block.one-third
                 a(href="category-men-pull.html")    
                     img(src="../css/images/slidePull.jpg", alt="Accès aux Pulls de Woo4men").one-whole
+
+block footer
+    include includes/footer.jade

@@ -1,0 +1,37 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #TOOLS FUNCTIONS
+//\*------------------------------------*/
+
+
+
+
+
+// Remove units of a number
+strip-units( val )
+    unit( val, "" )
+
+// Remove units of a number
+calc_line-height( val1, val2 )
+    strip-units( val1 ) / strip-units( val2 )
+
+// Converse PX to REM with PX fallback
+rem-fallback( property, arguments )
+    px-fall  = arguments
+    rem-fall = ""
+
+    for argument in arguments
+        value = strip-units( argument )
+        base  = strip-units( wf_font-size )
+
+        if rem-fall == null
+            rem-fall = value / base * 1rem
+        else
+            rem-fall += " " + value / base * 1rem
+
+    {property} px-fall
+    {property} unquote( rem-fall )

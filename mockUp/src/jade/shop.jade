@@ -11,7 +11,31 @@ block header
 block content
     section.beta-spacing--before.beta-spacing--after.clearfix
         h3.hiddenTitle Page des magasins
-
+        section
+            h4.gamma Localiser nos magasins
+            div#gmap.block.map__position
+        section.beta-spacing--before
+            - var numberItem = 0
+            h4.gamma Nos adresses
+            while numberItem < 8
+                div.inline-block.address__details
+                    div.inline-block
+                        div.address__title
+                            h5.epsilon Au fuseau
+                        div.address__info
+                            address
+                                span.block Rue Rogier 80, Namur
+                                span.block.info__tel 063 34 65 89
+                    div.inline-block.address__map
+                        a(href="#").removeLink
+                            img(src="../css/images/links/marker.png", alt="")
+                    script.
+                        var addressMags = "Rue Rogier 80, 5000 Namur, Belgique"
+                        
+                                    
+                                    
+                - numberItem++
+            
 block footer
     include includes/footer.jade
     

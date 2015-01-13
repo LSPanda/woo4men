@@ -18,6 +18,19 @@
     border none
     &:focus
         background wf_form-background-color-focus
+.form__submit
+    font-family wf_font-heading
+    rem-fallback( font-size, 14px )
+    text-transform uppercase
+    color wf_form-color-submit
+    background wf_form-background-submit
+    rem-fallback( padding, 10px 16px )
+    rem-fallback( margin-left, 16px )
+    border none
+    cursor pointer
+    transition( all, 0.25s )
+    &:hover
+        background wf_form-background-submit-hover
 
 .search
     position relative
@@ -33,3 +46,10 @@
     rem-fallback( padding, 12px )
     border none
     rem-fallback( text-indent, 100000px )
+
+.size__forms
+    width 100%
+.size__input
+    rem-fallback( width, 52px )
+.size__submit
+    rem-fallback( width, 214px )

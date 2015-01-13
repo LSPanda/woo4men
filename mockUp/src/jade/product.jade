@@ -12,16 +12,17 @@ block content
     section.beta-spacing--before.beta-spacing--after.clearfix
         h3.hiddenTitle Page produit de Woo4men
         section.inline-block.product
-            div.product__image
+            div.inline-block.product__img
                 div.one-whole
                     img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
-                div.inline-block.one-third
-                    img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
-                div.inline-block.one-third
-                    img(src="../css/images/mockUp/chemise2.jpg", alt="Presentation d'une chemise").one-whole
-                div.inline-block.one-third
-                    img(src="../css/images/mockUp/chemise3.jpg", alt="Presentation d'une chemise").one-whole
-            div.product__detail
+                div.gamma-spacing--before
+                    div.inline-block.one-third
+                        img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
+                    div.inline-block.one-third
+                        img(src="../css/images/mockUp/chemise2.jpg", alt="Presentation d'une chemise").one-whole
+                    div.inline-block.one-third
+                        img(src="../css/images/mockUp/chemise3.jpg", alt="Presentation d'une chemise").one-whole
+            div.inline-block.product__detail
                 div.detail__title
                     h3.delta Chemise
                 div.detail__body
@@ -42,35 +43,25 @@ block content
                     span.size__choices--button S
                     span.size__choices--button M
                     span.size__choices--button L
-                    span.size__choices--button.choice__button.focus XL
+                    span.size__choices--button.choice__button--focus XL
                     span.size__choices--button XXL
                 div.size__forms
                     form(action="#")
-                        input(type="text")
-                        div.forms-button
-                            a(href="#") +
-                            a(href="#") -
-                        input(type="submit")
+                        div.inline-block
+                            input(type="number" value="1").forms__input--pattern.size__input
+                        div.inline-block
+                            input(type="submit" value="Commander").form__submit.size__submit
         section.inline-block.same
             div.same__title
-                h3.delta Dans la même catégorie
                 - var numberItem = 0
-                
+                h3.delta Dans la même catégorie
                 while numberItem < 3
-                    section.block.article
+                    section.article.one-whole
                         a(href="product.html").removeLink
                             div.article__title
                                 h4.gamma Chemise
                             div.article__img
-                                img(src="../css/images/mockUp/chemise.jpg", alt="Présentation d'une chemise").one-whole
-                            div.article__body
-                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            div.information.clearfix
-                                div.information__promo
-                                    span -33%
-                                div.information__price
-                                    span.block.information__price--newPrice 33,50 €    
-                                    span.block.information__price--oldPrice 50,00 € 
+                                img(src="../css/images/mockUp/chemise.jpg", alt="Présentation d'une chemise")
                     - numberItem++
 
 block footer

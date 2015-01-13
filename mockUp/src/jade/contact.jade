@@ -10,8 +10,40 @@ block header
 
 block content
     section.beta-spacing--before.beta-spacing--after.clearfix
-        h3.hiddenTitle Contactez-nous
-
+        h3.hiddenTitle Service client - Contactez-nous
+        div(itemscope itemtype="http://schema.org/Thing")
+            h3(itemprop="headline").gamma Service client - Contactez-nous
+            p(itemprop="description") Pour des questions à propos d'une commande ou des informations sur nos produits.
+            form.form
+                div.inline-block.form__element
+                    label(for="Objet").hightlight.label__text
+                        | Objet
+                        span.span--spacing.asterisque *
+                    input(id="Objet" type="text" placeholder="Sujet du message").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="Commande").hightlight.label__text
+                        | N° de commande
+                        span.span--spacing.asterisque *
+                    input(id="Commande" type="text" placeholder="465743246467").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="mail").hightlight.label__text
+                        | Mail
+                        span.span--spacing.asterisque *
+                    input(id="mail" type="text" placeholder="johndoe@gmail.com").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="confiMail").hightlight.label__text
+                        | Confirmer mail
+                        span.span--spacing.asterisque *
+                    input(id="confiMail" type="text" placeholder="johndoe@gmail.com").forms__input--pattern
+                div.block.form__element--fullSize
+                    label(for="msgQuestion").hightlight.label__text Votre message
+                    textarea(id="msgQuestion" rows="10" placeholder="Votre question").forms__input--pattern
+                div.block.form__element--fullSize
+                    input(type="submit" value="Envoyez").form__submit
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.span--spacing.asterisque (*)
+                        | sont obligatoires
 block footer
     include includes/footer.jade
     

@@ -12,6 +12,7 @@ block content
     section.beta-spacing--before.beta-spacing--after.clearfix
         h3.hiddenTitle Page produit de Woo4men
         section.inline-block.product
+            h4.hiddenTitle Aperçu des chemises
             div.inline-block.product__img
                 div.one-whole
                     img(src="../css/images/mockUp/chemise1.jpg", alt="Presentation d'une chemise").one-whole
@@ -24,11 +25,11 @@ block content
                         img(src="../css/images/mockUp/chemise3.jpg", alt="Presentation d'une chemise").one-whole
             div.inline-block.product__detail
                 div.detail__title
-                    h3.delta Chemise
+                    h4.delta Chemise
                 div.detail__body
                     p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque iusto blanditiis labore consequatur earum reiciendis tempore doloremque magnam harum nulla deserunt autem illo, corrupti minima maxime asperiores dolores, dolorum fugiat.
                 div.information__title
-                    h3.delta À savoir
+                    h4.delta À savoir
                 div.information__body
                     dl.body__list
                         dt.body__list--italic Coupe :&nbsp;
@@ -38,7 +39,7 @@ block content
                         dt.body__list--italic Référence :&nbsp;
                         dd 133146736373
                 div.size__title
-                    h3.delta Taille
+                    h4.delta Taille
                 div.size__choices
                     span.size__choices--button S
                     span.size__choices--button M
@@ -54,12 +55,12 @@ block content
         section.inline-block.same
             div.same__title
                 - var numberItem = 0
-                h3.delta Dans la même catégorie
+                h4.delta Dans la même catégorie
                 while numberItem < 2
                     section.article.one-whole
                         a(href="product.html").removeLink
                             div.article__title
-                                h4.gamma Chemise
+                                h5.gamma Chemise
                             div.article__img
                                 img(src="../css/images/mockUp/chemise.jpg", alt="Présentation d'une chemise")
                     - numberItem++

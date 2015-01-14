@@ -19,7 +19,10 @@ header.band--bottom
                     span 0 
                     | article(s) - 
                     span 0,00 €
-                a(href="#").woo4menLink Commander maintenant
+                if current.accueil
+                    a(href="html/panier.html").woo4menLink Commander maintenant
+                else
+                    a(href="panier.html").woo4menLink Commander maintenant
     div.beta-spacing--after.clearfix
         nav.header__nav-menu
             h2.hiddenTitle Menu de navigation de Woo4men

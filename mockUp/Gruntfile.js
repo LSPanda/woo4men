@@ -41,7 +41,12 @@ module.exports = function( grunt ) {
 					"bin/html/category-women.html": "src/jade/category-women.jade",
 					"bin/html/product.html": "src/jade/product.jade",
 					"bin/html/shop.html": "src/jade/shop.jade",
-					"bin/html/contact.html": "src/jade/contact.jade"
+					"bin/html/contact.html": "src/jade/contact.jade",
+					"bin/html/panier.html": "src/jade/panier.jade",
+					"bin/html/panier-identification.html": "src/jade/panier-identification.jade",
+					"bin/html/panier-address.html": "src/jade/panier-address.jade",
+					"bin/html/panier-fraisDePort.html": "src/jade/panier-fraisDePort.jade",
+					"bin/html/panier-payement.html": "src/jade/panier-payement.jade"
 				}
 			}
 		},

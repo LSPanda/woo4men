@@ -9,7 +9,25 @@ block header
     include includes/header.jade 
 
 block content
-    
+    section.beta-spacing--before.beta-spacing--after.clearfix
+        h3.hiddenTitle Information sur le paiement
+        section.sequence
+            h4.gamma Moyen de paiement
+            div.block.sequence__path
+                div.inline-block.path__element
+                    a(href="panier.html").removeLink
+                        span.block.element__ball.element__ball--links Votre panier
+                div.inline-block.path__element
+                    a(href="panier-identification.html").removeLink
+                        span.block.element__ball.element__ball--links Identifiez-vous
+                div.inline-block.path__element
+                    a(href="panier-address.html").removeLink
+                        span.block.element__ball.element__ball--links Adresse
+                div.inline-block.path__element
+                    a(href="panier-fraisDePort.html").removeLink    
+                        span.block.element__ball.element__ball--links Frais de port
+                div.inline-block.path__element
+                    span.block.element__circle.element__circle--bill Paiement        
             
 block footer
     include includes/footer.jade

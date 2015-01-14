@@ -30,10 +30,10 @@
         };
         //Marker rendez-vous
         imageMag = {
-            url: '../css/images/links/marker.png',
-            size: new google.maps.Size( 55,60 ),
+            url: '../css/images/gMap/marker.png',
+            size: new google.maps.Size( 45,60 ),
             origin: new google.maps.Point( 0,0 ),
-            anchor: new google.maps.Point( 20, 60 )
+            anchor: new google.maps.Point( 15, 60 )
         };
         //Init Geocoder
         Geocoder = new google.maps.Geocoder();

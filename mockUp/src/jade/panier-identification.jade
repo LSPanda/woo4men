@@ -24,8 +24,28 @@ block content
                 div.inline-block.path__element
                     span.block.element__ball Paiement    
         
-        div.nextSequence
-            a(href="panier-address.html").removeLink.nextSequence__links Suivant
+        section.inline-block.panier.panier__forms
+            h4.delta Créez votre compte
+            p Entrez votre adresse e-mail pour créer un compte.
+            form.form
+                div.inline-block.form__element--fullSize
+                    label(for="mailInscription").hightlight.label__text Adresse e-mail
+                    input(id="mailInscription" type="text" placeholder="john.doe@gmail.com").forms__input--pattern
+                div.block.form__element--fullSize
+                    a(href="panier-inscription.html").block.removeLink.inscription__submit Créez votre compte
+        
+        section.inline-block.panier.panier__forms
+            h4.delta Déjà enregistrer&nbsp;?
+            p Entrez votre adresse e-mail et mot de passe pour vous connecter.
+            form.form
+                div.inline-block.form__element--fullSize
+                    label(for="mailConnection").hightlight.label__text Adresse e-mail
+                    input(id="mailConnection" type="text" placeholder="john.doe@gmail.com").forms__input--pattern
+                div.inline-block.form__element--fullSize
+                    label(for="pwd").hightlight.label__text Mot de passe
+                    input(id="pwd" type="text" placeholder="*********").forms__input--pattern
+                div.block.form__element--fullSize
+                    a(href="panier-address.html").block.removeLink.inscription__submit Identifier-vous
                
 block footer
     include includes/footer.jade

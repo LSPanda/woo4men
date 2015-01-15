@@ -1,0 +1,34 @@
+//- shop.html
+extends includes/layout
+
+block title
+    title Woo4men - Nos magasins   
+
+block header
+    - var current = { panier: 'focus' }
+    include includes/header.jade 
+
+block content
+    section.beta-spacing--before.beta-spacing--after.clearfix
+    h3.hiddenTitle Création d'un compte chez Woo4men
+    section.sequence
+        h4.gamma Créer un compte
+        div.block.sequence__path
+            div.inline-block.path__element
+                a(href="panier.html").removeLink
+                    span.block.element__ball.element__ball--links Votre panier
+            div.inline-block.path__element
+                span.block.element__circle.element__circle--personn Identifiez-vous
+            div.inline-block.path__element
+                span.block.element__ball Adresse
+            div.inline-block.path__element
+                span.block.element__ball Paiement 
+        
+        div.nextSequence
+            a(href="#").removeLink.nextSequence__links Commander
+            
+block footer
+    include includes/footer.jade
+    
+block script
+    include includes/script.jade

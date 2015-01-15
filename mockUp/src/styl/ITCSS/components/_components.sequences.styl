@@ -4,28 +4,13 @@
 * https://github.com/LSPanda | http://portfolio.simon-leyder.be
 */
 ///*------------------------------------*\
-//    #COMPONENTS PANIER
+//    #COMPONENTS SEQUENCES
 //\*------------------------------------*/
 
 
 
 
-// - Recursive Style
-.nextSequence
-    rem-fallback( margin, 32px 0 8px )
-    text-align right
-.nextSequence__links
-    rem-fallback( font-size, 20px )
-    text-transform uppercase
-    color wf_nextStep
-    background wf_background-nextStep
-    rem-fallback( padding, 8px 16px )
-    transition( all, 0.25s )
-    &:hover
-        color wf_nextStep
-        background wf_background-nextStep-hover
-
-// - Style for my sequence
+// - Style for my buyings sequence
 .sequence
     rem-fallback( margin-bottom, 30px )
 .sequence__path
@@ -64,43 +49,17 @@
 .element__circle--bill
     background wf_background-color url( "images/links/sprite.png" ) -331.5px -12.5px
 
-// - Style for my panier
-td
-    rem-fallback( padding, 14px 0 )
-.table
-    width 100%
-    vertical-align top
-//Style for my cells
-.table__row--header
-    rem-fallback( font-size, 18px )
-    text-transform uppercase
-.table__row--footer
-    rem-fallback( font-size, 22px )
-    text-transform uppercase
-.table__row--border
-    border-top 2px solid wf_border-tableRow
-.table__row--boldBorder
-    border-top 4px solid wf_border-tableRow
-//Width for cells
-.table__data--img
-    width 30%
-    text-align center
-.data__img
-    width 100%
-    rem-fallback( max-width, 182px )
-    rem-fallback( max-height, 182px )
-.table__data--detail
-    width 50%
-    vertical-align top
-.table__data--total
-    width 20%
-    vertical-align top
-.table__data--price
-    position relative
-    width 10%
+// - Sequences
+.nextSequence
+    rem-fallback( margin, 32px 0 8px )
     text-align right
-    vertical-align top
-.data__price--delete
-    position absolute
-    right 0
-    rem-fallback( bottom, 14px )
+.nextSequence__links
+    rem-fallback( font-size, 20px )
+    text-transform uppercase
+    color wf_nextStep
+    background wf_background-nextStep
+    rem-fallback( padding, 8px 16px )
+    transition( all, 0.25s )
+    &:hover
+        color wf_nextStep
+        background wf_background-nextStep-hover

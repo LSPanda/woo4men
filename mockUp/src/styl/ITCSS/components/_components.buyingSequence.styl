@@ -1,0 +1,100 @@
+/*!
+* CSS Methodology based on InuitCSS, used for my owned workflow
+*
+* https://github.com/LSPanda | http://portfolio.simon-leyder.be
+*/
+///*------------------------------------*\
+//    #COMPONENTS PANIER
+//\*------------------------------------*/
+
+
+
+
+// - Recursive Style
+.nextSequence
+    rem-fallback( margin, 32px 0 8px )
+    text-align right
+.nextSequence__links
+    rem-fallback( font-size, 20px )
+    text-transform uppercase
+    color wf_nextStep
+    background wf_background-nextStep
+    rem-fallback( padding, 8px 16px )
+    transition( all, 0.25s )
+    &:hover
+        color wf_nextStep
+        background wf_background-nextStep-hover
+
+// - Style for my sequence
+.sequence
+    rem-fallback( margin-bottom, 30px )
+.sequence__path
+    rem-fallback( width, 800px )
+    margin 52px auto 0
+    &:before
+        content ""
+        display block
+        rem-fallback( margin-bottom, -26px )
+        border-top 1px solid wf_border-pathAll
+.path__element
+    rem-fallback( width, 200px )
+    rem-fallback( height, 60px )
+.element__ball
+    rem-fallback( width, 20px )
+    rem-fallback( height, 20px )
+    background wf_background-path
+    rem-fallback( margin, 15px 70px )
+    border-radius( 10px )
+    text-indent -9999px
+.element__ball--links
+    background wf_background-pathLink
+.element__circle
+    rem-fallback( width, 50px )
+    rem-fallback( height, 50px )
+    rem-fallback( margin, 0 60px )
+    border 2px solid wf_border-path
+    border-radius( 25px )
+    text-indent -9999px
+.element__circle--panier
+    background wf_background-color url( "images/links/sprite.png" ) -91.5px -12.5px
+.element__circle--personn
+    background wf_background-color url( "images/links/sprite.png" ) -152.5px -12.5px
+.element__circle--address
+    background wf_background-color url( "images/links/sprite.png" ) -211.5px -12.5px
+.element__circle--bill
+    background wf_background-color url( "images/links/sprite.png" ) -331.5px -12.5px
+
+// - Style for my panier
+td
+    rem-fallback( padding, 14px 0 )
+.table
+    width 100%
+    vertical-align top
+//Style for my cells
+.table__row--border
+    border-top 2px solid wf_border-tableRow
+.table__row--boldBorder
+    border-top 4px solid wf_border-tableRow
+//Width for cells
+.table__data--img
+    width 30%
+    text-align center
+.data__img
+    width 100%
+    rem-fallback( max-width, 182px )
+    rem-fallback( max-height, 182px )
+.table__data--detail
+    width 50%
+    vertical-align top
+.table__data--total
+    width 20%
+    vertical-align top
+.table__data--price
+    position relative
+    width 10%
+    text-align right
+    vertical-align top
+.data__price--delete
+    position absolute
+    right 0
+    rem-fallback( bottom, 14px )

@@ -32,7 +32,7 @@ block content
             div.listArticles__table
                 table.table
                     //- Première ligne
-                    tr
+                    tr.table__row--header
                         td.table__data--img &nbsp;
                         td.table__data--detail Article
                         td.table__data--total Quantité
@@ -41,7 +41,14 @@ block content
                     tr.table__row--border
                         td.table__data--img 
                             img(src="../css/images/mockUp/chemise.jpg", alt="Présentation d'une chemise").data__img
-                        td.table__data--detail Jolie chemise
+                        td.table__data--detail
+                            h5.delta Jolie chemise
+                            p Chemise homme
+                            p Taille :
+                                span.span--spacing M
+                            p Référence de l'article :
+                                span.span--spacing 
+                                    a(href="product.html").woo4menLink 13432453
                         td.table__data--total
                             form(action="#")
                                 div.inline-block
@@ -54,19 +61,19 @@ block content
                     tr.table__row--border
                         td.table__data--img &nbsp;
                         td.table__data--detail &nbsp;
-                        td.table__data--total Frais de port
+                        td.table__row--header.table__data--total Frais de port
                         td.table__data--price 6,99€
                     //- Montant Article
                     tr.table__row--border
                         td.table__data--img &nbsp;
                         td.table__data--detail &nbsp;
-                        td.table__data--total Montant Article
+                        td.table__row--header.table__data--total Montant Article
                         td.table__data--price 99,99€
                     //- Montant total
-                    tr.table__row--boldBorder
+                    tr.table__row--footer.table__row--boldBorder
                         td.table__data--img &nbsp;
                         td.table__data--detail &nbsp;
-                        td.table__data--total Prix total
+                        td.table__data--total Total
                         td.table__data--price 106,98€
         
         div.nextSequence

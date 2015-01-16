@@ -24,9 +24,86 @@ block content
             div.inline-block.path__element
                 span.block.element__ball Paiement 
         
-        div.nextSequence
-            a(href="#").removeLink.nextSequence__links Commander
+        section.panier
+            form.form
+                h4.delta Vos informations personnelles
+                div.inline-block.form__element
+                    label(for="nameInfo").hightlight.label__text
+                        | Nom
+                        span.span--spacing.asterisque *
+                    input(id="nameInfo" type="text" placeholder="John").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="prenomInfo").hightlight.label__text
+                        | Prénom
+                        span.span--spacing.asterisque *
+                    input(id="prenomInfo" type="text" placeholder="Doe").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="mailInfo").hightlight.label__text
+                        | Mail
+                        span.span--spacing.asterisque *
+                    input(id="mailInfo" type="text" placeholder="johndoe@gmail.com").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="pwd").hightlight.label__text
+                        | Mot de passe
+                        span.span--spacing.asterisque *
+                    input(id="pwd" type="text" placeholder="*********").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="birth").hightlight.label__text
+                        | Date de naissance
+                        span.span--spacing.asterisque *
+                    input(id="birth" type="text" placeholder="JJ/MM/AAAA").forms__input--pattern
             
+                h4.delta Votre adresse
+                div.inline-block.form__element
+                    label(for="nomAddress").hightlight.label__text
+                        | Nom
+                        span.span--spacing.asterisque *
+                    input(id="nomAddress" type="text" placeholder="john").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="prenomAddress").hightlight.label__text
+                        | Prénom
+                        span.span--spacing.asterisque *
+                    input(id="prenomAddress" type="text" placeholder="doe").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="company").hightlight.label__text Société
+                    input(id="company" type="text" placeholder="Europa Corp").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="address").hightlight.label__text
+                        | Adresse
+                        span.span--spacing.asterisque *
+                    input(id="address" type="text" placeholder="Rue des pépinière, 9").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="secondAddress").hightlight.label__text Seconde adresse
+                    input(id="secondAddress" type="text" placeholder="Rue des pépinière, 9").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="postal").hightlight.label__text
+                        | Code Postal
+                        span.span--spacing.asterisque *
+                    input(id="postal" type="text" placeholder="6860").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="town").hightlight.label__text
+                        | Ville
+                        span.span--spacing.asterisque *
+                    input(id="town" type="text" placeholder="Ebly").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="country").hightlight.label__text
+                        | Pays
+                        span.span--spacing.asterisque *
+                    input(id="country" type="text" placeholder="Belgique").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="telMobile").hightlight.label__text
+                        | Téléphone mobile
+                        span.span--spacing.asterisque *
+                    input(id="telMobile" type="text" placeholder="0471 31 77 91").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="telFix").hightlight.label__text Téléphone fixe
+                    input(id="telFix" type="text" placeholder="061 25 55 68").forms__input--pattern
+                div.block.form__element--fullSize
+                    a(href="panier-address.html").block.removeLink.inscription__submit S'inscrire
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.span--spacing.asterisque (*)
+                        | sont obligatoires
 block footer
     include includes/footer.jade
     

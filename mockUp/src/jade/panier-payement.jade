@@ -26,8 +26,23 @@ block content
                 div.inline-block.path__element
                     span.block.element__circle.element__circle--bill Paiement
         
-        div.nextSequence
-            a(href="#").removeLink.nextSequence__links Commander
+        section.panier
+            h4.delta Choisissez votre méthode de paiement
+            p
+                | Merci de choisir votre moyen de paiement afin de régler la somme de
+                span.hightlight.span--spacing 106,98€
+            div.inline-block.paiement
+                a(href="#").removeLink
+                    h5.epsilon Virement bancaire
+                    img(src="../css/images/links/virement.png", alt="Logo des virements bancaires")
+            div.inline-block.paiement
+                a(href="#").removeLink
+                    h5.epsilon Paypal 
+                    img(src="../css/images/links/paypal.png", alt="Logo de Paypal")
+            div.inline-block.paiement
+                a(href="#").removeLink    
+                    h5.epsilon Carte bancaire
+                    img(src="../css/images/links/visa.png", alt="Logo des cartes bancaire")
             
 block footer
     include includes/footer.jade

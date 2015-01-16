@@ -13,7 +13,10 @@ header.band--bottom
             div.header__login
                 p
                     | Bienvenue, 
-                    a(href="#").woo4menLink connectez-vous
+                    if current.accueil
+                        a(href="html/login.html").woo4menLink connectez-vous
+                    else
+                        a(href="login.html").woo4menLink connectez-vous
             div.header__panier.boxes--grey
                 p
                     span 0 

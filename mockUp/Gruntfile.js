@@ -34,6 +34,7 @@ module.exports = function( grunt ) {
 				},
 				"files": {
 					"bin/index.html": "src/jade/index.jade",
+					"bin/html/login.html": "src/jade/login.jade",
 					"bin/html/category-men.html": "src/jade/category-men.jade",
 					"bin/html/category-men-chemise.html": "src/jade/category-men-chemise.jade",
 					"bin/html/category-men-polo.html": "src/jade/category-men-polo.jade",

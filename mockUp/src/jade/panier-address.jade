@@ -9,24 +9,24 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Indiquer votre adresse
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Indiquer votre adresse
         section.sequence
-            h4.gamma Confirmer votre adresse
+            h4(itemprop="headline").gamma Confirmer votre adresse
             div.block.sequence__path
                 div.inline-block.path__element
-                    a(href="panier.html").removeLink
-                        span.block.element__ball.element__ball--links Votre panier
+                    a(itemprop="url" href="panier.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
                 div.inline-block.path__element
-                    a(href="panier-identification.html").removeLink
-                        span.block.element__ball.element__ball--links Identifiez-vous
+                    a(itemprop="url" href="panier-identification.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Identifiez-vous
                 div.inline-block.path__element
-                    span.block.element__circle.element__circle--address Adresse
+                    span(itemprop="name").block.element__circle.element__circle--address Adresse
                 div.inline-block.path__element
-                    span.block.element__ball Paiement    
+                    span(itemprop="name").block.element__ball Paiement    
         
         section.panier
-            h4.delta Adresse de livraison
+            h4(itemprop="headline").delta Adresse de livraison
             form.form
                 div.inline-block.form__element
                     label(for="nameAddress").hightlight.label__text

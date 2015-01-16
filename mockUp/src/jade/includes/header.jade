@@ -1,81 +1,81 @@
 //- includes/header.jade
-header.band--bottom
+header(itemscope itemtype="http://schema.org/WPHeader").band--bottom
     div.alpha-spacing--after.clearfix
         div.header__logo
-            h1.hiddenTitle Woo4men, vente de vêtement en ligne
+            h1(itemprop="headline").hiddenTitle Woo4men, vente de vêtement en ligne
             if current.accueil
-                a(href="index.html")
-                    img(src="css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
+                a(itemprop="url" href="index.html")
+                    img(itemprop="image" src="css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
             else 
-                a(href="../index.html")
-                    img(src="../css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
+                a(itemprop="url" href="../index.html")
+                    img(itemprop="image" src="../css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
         div.header__login-panier
             div.header__login
-                p
+                p(itemprop="content")
                     | Bienvenue, 
                     if current.accueil
-                        a(href="html/login.html").woo4menLink connectez-vous
+                        a(itemprop="url" href="html/login.html").woo4menLink connectez-vous
                     else
-                        a(href="login.html").woo4menLink connectez-vous
+                        a(itemprop="url" href="login.html").woo4menLink connectez-vous
             div.header__panier.boxes--grey
-                p
+                p(itemprop="content")
                     span 0 
                     | article(s) - 
                     span 0,00 €
                 if current.accueil
-                    a(href="html/panier.html").woo4menLink Commander maintenant
+                    a(itemprop="url" href="html/panier.html").woo4menLink Commander maintenant
                 else
-                    a(href="panier.html").woo4menLink Commander maintenant
+                    a(itemprop="url" href="panier.html").woo4menLink Commander maintenant
     div.beta-spacing--after.clearfix
-        nav.header__nav-menu
-            h2.hiddenTitle Menu de navigation de Woo4men
+        nav(itemscope itemtype="http://schema.org/SiteNavigationElement").header__nav-menu
+            h2(itemprop="alternativeHeadline").hiddenTitle Menu de navigation de Woo4men
             //- Add color to "Accueil" when focus
             if current.accueil
-                span
-                    a(href="index.html").navigation__header.navigation__focus Accueil
+                span(itemprop="keywords")
+                    a(itemprop="url" href="index.html").navigation__header.navigation__focus Accueil
             else 
-                span
-                    a(href="../index.html").navigation__header Accueil
+                span(itemprop="keywords")
+                    a(itemprop="url" href="../index.html").navigation__header Accueil
             //- Add color to "Homme" when focus & change link path
             if current.accueil
-                span
-                    a(href="html/category-men.html").navigation__header Homme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="html/category-men.html").navigation__header Homme
             else if current.category1
-                span
-                    a(href="category-men.html").navigation__header.navigation__focus Homme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="category-men.html").navigation__header.navigation__focus Homme
             else
-                span
-                    a(href="category-men.html").navigation__header Homme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="category-men.html").navigation__header Homme
             //- Add color to "Femme" when focus & change link path
             if current.accueil
-                span
-                    a(href="html/category-women.html").navigation__header Femme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="html/category-women.html").navigation__header Femme
             else if current.category2
-                span
-                    a(href="category-women.html").navigation__header.navigation__focus Femme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="category-women.html").navigation__header.navigation__focus Femme
             else
-                span
-                    a(href="category-women.html").navigation__header Femme
+                span(itemprop="keywords")
+                    a(itemprop="url" href="category-women.html").navigation__header Femme
             //- Add color to "Point de vente" when focus & change link path
             if current.accueil
-                span
-                    a(href="html/shop.html").navigation__header Magasins
+                span(itemprop="keywords")
+                    a(itemprop="url" href="html/shop.html").navigation__header Magasins
             else if current.shop
-                span
-                    a(href="shop.html").navigation__header.navigation__focus Magasins
+                span(itemprop="keywords")
+                    a(itemprop="url" href="shop.html").navigation__header.navigation__focus Magasins
             else
-                span
-                    a(href="shop.html").navigation__header Magasins
+                span(itemprop="keywords")
+                    a(itemprop="url" href="shop.html").navigation__header Magasins
             //- Add color to "Contact" when focus & change link path
             if current.accueil
-                span
-                    a(href="html/contact.html").navigation__header Contact
+                span(itemprop="keywords")
+                    a(itemprop="url" href="html/contact.html").navigation__header Contact
             else if current.contact
-                span
-                    a(href="contact.html").navigation__header.navigation__focus Contact
+                span(itemprop="keywords")
+                    a(itemprop="url" href="contact.html").navigation__header.navigation__focus Contact
             else
-                span
-                    a(href="contact.html").navigation__header Contact
+                span(itemprop="keywords")
+                    a(itemprop="url" href="contact.html").navigation__header Contact
 
         div.header__search
             form.search

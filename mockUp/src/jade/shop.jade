@@ -9,25 +9,25 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after.clearfix
+    section.beta-spacing--before.alpha-spacing--after.clearfix
         h3.hiddenTitle Page des magasins
-        section
-            h4.gamma Localiser nos magasins
-            div#gmap.block.map__position
-        section.beta-spacing--before
+        section(itemscope itemtype="http://schema.org/Map")
+            h4(itemprop="headline").gamma Localiser nos magasins
+            div(itemprop="mapType")#gmap.block.map__position
+        section(itemscope itemtype="http://schema.org/ClothingStore").beta-spacing--before
             - var numberItem = 0
-            h4.gamma Nos adresses
+            h4(itemprop="headline").gamma Nos adresses
             while numberItem < 8
                 div.inline-block.address__details
                     div.inline-block
                         div.address__title
-                            h5.epsilon Au fuseau
+                            h5(itemprop="brand").epsilon Au fuseau
                         div.address__info
-                            address
-                                span.block Rue Rogier 80, Namur
-                                span.block.info__tel 063 34 65 89
+                            div
+                                span(itemprop="address").block Rue Rogier 80, Namur
+                                span(itemprop="telephone").block.info__tel 063 34 65 89
                     div.inline-block.address__map
-                        a(href="#").removeLink
+                        a(itemprop="url" href="#").removeLink
                             span.block.map__icon
                     script.
                         var addressMags = "Rue Rogier 80, 5000 Namur, Belgique"

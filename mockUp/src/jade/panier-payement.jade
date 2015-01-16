@@ -9,26 +9,26 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Information sur le paiement
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Information sur le paiement
         section.sequence
             h4.gamma Moyen de paiement
             div.block.sequence__path
                 div.inline-block.path__element
-                    a(href="panier.html").removeLink
-                        span.block.element__ball.element__ball--links Votre panier
+                    a(itemprop="url" href="panier.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
                 div.inline-block.path__element
-                    a(href="panier-identification.html").removeLink
-                        span.block.element__ball.element__ball--links Identifiez-vous
+                    a(itemprop="url" href="panier-identification.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Identifiez-vous
                 div.inline-block.path__element
-                    a(href="panier-address.html").removeLink
-                        span.block.element__ball.element__ball--links Adresse
+                    a(itemprop="url" href="panier-address.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Adresse
                 div.inline-block.path__element
-                    span.block.element__circle.element__circle--bill Paiement
+                    span(itemprop="name").block.element__circle.element__circle--bill Paiement
         
         section.panier
-            h4.delta Choisissez votre méthode de paiement
-            p
+            h4(itemprop="headline").delta Choisissez votre méthode de paiement
+            p(itemprop="about")
                 | Merci de choisir votre moyen de paiement afin de régler la somme de
                 span.hightlight.span--spacing 106,98€
             div.inline-block.paiement

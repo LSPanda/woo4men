@@ -12,25 +12,25 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Page d'accueil de Woo4men
+    section(itemscope itemtype="http://schema.org/WebPage").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Page d'accueil de Woo4men
         div.one-whole
-            h4.hiddenTitle Articles en promotion chez Woo4men
-            a(href="html/category-women.html")
-                img(src="css/images/mockUp/slide.jpg", alt="Promotions spécial Noêl de Woo4men").one-whole
+            h4(itemprop="headline").hiddenTitle Articles en promotion chez Woo4men
+            a(itemprop="url" href="html/category-women.html")
+                img(itemprop="image" src="css/images/mockUp/slide.jpg", alt="Promotions spécial Noêl de Woo4men").one-whole
         div.gamma-spacing--before
             div.inline-block.linkCategory
-                h4.hiddenTitle Chemises de Woo4men
-                a(href="html/category-men-chemise.html")
-                    img(src="css/images/mockUp/slideChemise.jpg", alt="Accès aux Chemises de Woo4men").one-whole
+                h4(itemprop="headline").hiddenTitle Chemises de Woo4men
+                a(itemprop="url" href="html/category-men-chemise.html")
+                    img(itemprop="image" src="css/images/mockUp/slideChemise.jpg", alt="Accès aux Chemises de Woo4men").one-whole
             div.inline-block.linkCategory
-                h4.hiddenTitle Polos de Woo4men
-                a(href="html/category-men-polo.html")
-                    img(src="css/images/mockUp/slidePolo.jpg", alt="Accès aux Polos de Woo4men").one-whole
+                h4(itemprop="headline").hiddenTitle Polos de Woo4men
+                a(itemprop="url" href="html/category-men-polo.html")
+                    img(itemprop="image" src="css/images/mockUp/slidePolo.jpg", alt="Accès aux Polos de Woo4men").one-whole
             div.inline-block.linkCategory
-                h4.hiddenTitle Pulls de Woo4men
-                a(href="html/category-men-pull.html")
-                    img(src="css/images/mockUp/slidePull.jpg", alt="Accès aux Pulls de Woo4men").one-whole
+                h4(itemprop="headline").hiddenTitle Pulls de Woo4men
+                a(itemprop="url" href="html/category-men-pull.html")
+                    img(itemprop="image" src="css/images/mockUp/slidePull.jpg", alt="Accès aux Pulls de Woo4men").one-whole
 
 block footer
     include includes/footer.jade

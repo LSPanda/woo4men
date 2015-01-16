@@ -13,33 +13,33 @@ block content
         div.arrow
             div.arrow-up--color
             div.arrow-up--white
-        div.filter__nav-menu.gamma-spacing--after.gamma-spacing--before
-            span
-                a(href="category-men-chemise.html").navigation__filtre.navigation__focus Chemises
-            span
-                a(href="category-men-pull.html").navigation__filtre Pulls
-            span
-                a(href="category-men-polo.html").navigation__filtre Polos
+        div(itemscope itemtype="http://schema.org/SiteNavigationElement").filter__nav-menu.gamma-spacing--after.gamma-spacing--before
+            span(itemprop="keywords")
+                a(itemprop="url" href="category-men-chemise.html").navigation__filtre.navigation__focus Chemises
+            span(itemprop="keywords")
+                a(itemprop="url" href="category-men-pull.html").navigation__filtre Pulls
+            span(itemprop="keywords")
+                a(itemprop="url" href="category-men-polo.html").navigation__filtre Polos
         
     - var numberItem = 0
     
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Page catégorie de Woo4men
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Page catégorie de Woo4men
         while numberItem < 4
-            section.inline-block.article
-                a(href="product.html").removeLink
+            section(itemscope itemtype="http://schema.org/Product").inline-block.article
+                a(itemprop="url" href="product.html").removeLink
                     div.article__title
-                        h4.gamma Chemise
+                        h4(itemprop="name").gamma Chemise
                     div.article__img
-                        img(src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
+                        img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
                     div.article__body
-                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    div.information.clearfix
+                        p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    div(itemscope itemtype="http://schema.org/BuyAction").information.clearfix
                         div.information__promo
-                            span -33%
+                            span(itemprop="warrantyPromise") -33%
                         div.information__price
-                            span.block.information__price--newPrice 33,50 €    
-                            span.block.information__price--oldPrice 50,00 €    
+                            span(itemprop="price").block.information__price--newPrice 33,50 €    
+                            span(itemprop="price").block.information__price--oldPrice 50,00 €    
             - numberItem++
 block footer
     include includes/footer.jade

@@ -9,23 +9,23 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Panier d'achat de Woo4men
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Panier d'achat de Woo4men
         section.sequence
-            h4.gamma Récapitulatif de la commande
+            h4(itemprop="headline").gamma Récapitulatif de la commande
             div.block.sequence__path
                 div.inline-block.path__element
-                    span.block.element__circle.element__circle--panier Votre panier
+                    span(itemprop="name").block.element__circle.element__circle--panier Votre panier
                 div.inline-block.path__element
-                    span.block.element__ball Identifiez-vous
+                    span(itemprop="name").block.element__ball Identifiez-vous
                 div.inline-block.path__element
-                    span.block.element__ball Adresse
+                    span(itemprop="name").block.element__ball Adresse
                 div.inline-block.path__element
-                    span.block.element__ball Paiement
+                    span(itemprop="name").block.element__ball Paiement
         
         section.panier
-            h4.delta Liste de vos achats
-            p
+            h4(itemprop="headline").delta Liste de vos achats
+            p(itemprop="about")
                 | Votre panier contient
                 span.span--spacing 1
                 | produit

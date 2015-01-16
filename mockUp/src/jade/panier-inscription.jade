@@ -9,24 +9,24 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-    h3.hiddenTitle Création d'un compte chez Woo4men
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+    h3(itemprop="headline").hiddenTitle Création d'un compte chez Woo4men
     section.sequence
-        h4.gamma Créer un compte
+        h4(itemprop="headline").gamma Créer un compte
         div.block.sequence__path
             div.inline-block.path__element
-                a(href="panier.html").removeLink
-                    span.block.element__ball.element__ball--links Votre panier
+                a(itemprop="url" href="panier.html").removeLink
+                    span(itemprop="name").block.element__ball.element__ball--links Votre panier
             div.inline-block.path__element
-                span.block.element__circle.element__circle--personn Identifiez-vous
+                span(itemprop="name").block.element__circle.element__circle--personn Identifiez-vous
             div.inline-block.path__element
-                span.block.element__ball Adresse
+                span(itemprop="name").block.element__ball Adresse
             div.inline-block.path__element
-                span.block.element__ball Paiement 
+                span(itemprop="name").block.element__ball Paiement 
         
         section.panier
             form.form
-                h4.delta Vos informations personnelles
+                h4(itemprop="headline").delta Vos informations personnelles
                 div.inline-block.form__element
                     label(for="nameInfo").hightlight.label__text
                         | Nom
@@ -53,7 +53,7 @@ block content
                         span.span--spacing.asterisque *
                     input(id="birth" type="text" placeholder="JJ/MM/AAAA").forms__input--pattern
             
-                h4.delta Votre adresse
+                h4(itemprop="headline").delta Votre adresse
                 div.inline-block.form__element
                     label(for="nomAddress").hightlight.label__text
                         | Nom

@@ -9,24 +9,24 @@ block header
     include includes/header.jade 
 
 block content
-    section.beta-spacing--before.beta-spacing--after
-        h3.hiddenTitle Connection à votre compte
+    section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
+        h3(itemprop="headline").hiddenTitle Connection à votre compte
         section.sequence
-            h4.gamma Connectez-vous - Créer un compte
+            h4(itemprop="headline").gamma Connectez-vous - Créer un compte
             div.block.sequence__path
                 div.inline-block.path__element
-                    a(href="panier.html").removeLink
-                        span.block.element__ball.element__ball--links Votre panier
+                    a(itemprop="url" href="panier.html").removeLink
+                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
                 div.inline-block.path__element
-                    span.block.element__circle.element__circle--personn Identifiez-vous
+                    span(itemprop="name").block.element__circle.element__circle--personn Identifiez-vous
                 div.inline-block.path__element
-                    span.block.element__ball Adresse
+                    span(itemprop="name").block.element__ball Adresse
                 div.inline-block.path__element
-                    span.block.element__ball Paiement    
+                    span(itemprop="name").block.element__ball Paiement    
         
         section.inline-block.panier.panier__forms
-            h4.delta Créez votre compte
-            p Entrez votre adresse e-mail pour créer un compte.
+            h4(itemprop="headline").delta Créez votre compte
+            p(itemprop="about") Entrez votre adresse e-mail pour créer un compte.
             form.form
                 div.inline-block.form__element--fullSize
                     label(for="mailInscription").hightlight.label__text Adresse e-mail
@@ -35,8 +35,8 @@ block content
                     a(href="panier-inscription.html").block.removeLink.inscription__submit Créez votre compte
         
         section.inline-block.panier.panier__forms
-            h4.delta Déjà enregistré&nbsp;?
-            p Entrez votre adresse e-mail et mot de passe pour vous connecter.
+            h4(itemprop="headline").delta Déjà enregistré&nbsp;?
+            p(itemprop="about") Entrez votre adresse e-mail et mot de passe pour vous connecter.
             form.form
                 div.inline-block.form__element--fullSize
                     label(for="mailConnection").hightlight.label__text Adresse e-mail

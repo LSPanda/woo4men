@@ -12,7 +12,7 @@ block content
     section.beta-spacing--before.beta-spacing--after.clearfix
         h3.hiddenTitle Indiquer votre adresse
         section.sequence
-            h4.gamma Confirmer vos adresses
+            h4.gamma Confirmer votre adresse
             div.block.sequence__path
                 div.inline-block.path__element
                     a(href="panier.html").removeLink
@@ -25,8 +25,48 @@ block content
                 div.inline-block.path__element
                     span.block.element__ball Paiement    
         
-        div.nextSequence
-            a(href="panier-payement.html").removeLink.nextSequence__links Suivant  
+        section.panier
+            h4.delta Adresse de livraison
+            form.form
+                div.inline-block.form__element
+                    label(for="nameAddress").hightlight.label__text
+                        | Nom
+                        span.span--spacing.asterisque *
+                    input(id="nameAddress" type="text" placeholder="Doe").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="prenomAddress").hightlight.label__text
+                        | Prénom
+                        span.span--spacing.asterisque *
+                    input(id="prenomAddress" type="text" placeholder="John").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="address").hightlight.label__text
+                        | Adresse
+                        span.span--spacing.asterisque *
+                    input(id="address" type="text" placeholder="Rue des Pépinières, 9").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="codePostal").hightlight.label__text
+                        | Code postal
+                        span.span--spacing.asterisque *
+                    input(id="codePostal" type="text" placeholder="6860").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="town").hightlight.label__text
+                        | Ville
+                        span.span--spacing.asterisque *
+                    input(id="town" type="text" placeholder="Ebly").forms__input--pattern
+                div.inline-block.form__element
+                    label(for="country").hightlight.label__text
+                        | Pays
+                        span.span--spacing.asterisque *
+                    input(id="country" type="text" placeholder="Belgique").forms__input--pattern
+                div.block.form__element--fullSize
+                    label(for="msgQuestion").hightlight.label__text Votre message
+                    textarea(id="msgQuestion" rows="10" placeholder="Information complémentaire").forms__input--pattern
+                div.block.form__element--fullSize
+                    a(href="panier-payement.html").block.removeLink.inscription__submit Valider adresse
+                    label.hightlight.label__text
+                        | Tous les champs munis d’un astérisque
+                        span.span--spacing.asterisque (*)
+                        | sont obligatoires 
             
 block footer
     include includes/footer.jade

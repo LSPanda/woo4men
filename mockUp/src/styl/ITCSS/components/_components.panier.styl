@@ -15,6 +15,9 @@
     rem-fallback( padding, 0 24px )
 .panier__forms
     width 50%
+    +media-query( screen, max-width 940px )
+        width 100%
+        rem-fallback( margin-bottom, 32px )
 
 .table
     width 100%
@@ -28,6 +31,8 @@ td
     rem-fallback( margin-top, 16px )
     text-align center
     transition( all, 0.25s )
+    +media-query( screen, max-width 940px )
+        width 100%
     &:hover
         background wf_background-boxes
 
@@ -51,9 +56,14 @@ td
     width 100%
     rem-fallback( max-width, 182px )
     rem-fallback( max-height, 182px )
+    +media-query( screen, max-width 590px )
+        width 0%
+        display none
 .table__data--detail
     width 50%
     vertical-align top
+    +media-query( screen, max-width 590px )
+        width 70%
 .table__data--total
     width 20%
     vertical-align top

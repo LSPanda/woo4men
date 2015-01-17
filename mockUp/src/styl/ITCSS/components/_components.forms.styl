@@ -48,9 +48,13 @@
 
 .search
     position relative
+    +media-query( screen, max-width 940px )
+        width 100%
 .search__seek
     rem-fallback( font-size, 14px )
     rem-fallback( min-width, 265px )
+    +media-query( screen, max-width 940px )
+        rem-fallback( margin-top, 8px )
 .search__validate
     position: absolute
     rem-fallback( width, 18px )
@@ -60,7 +64,10 @@
     background wf_form-background-color url( "images/links/sprite.png" ) -95px -65px
     rem-fallback( padding, 12px )
     border none
+    cursor pointer
     rem-fallback( text-indent, 100000px )
+    +media-query( screen, max-width 940px )
+        rem-fallback( top, 18px )
 
 .size__forms
     width 100%

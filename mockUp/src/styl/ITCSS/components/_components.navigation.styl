@@ -19,6 +19,11 @@
     text-decoration none
     rem-fallback( padding-right, 12px )
     transition( all, 0.25s )
+    +media-query( screen, max-width 590px )
+        display inline-block
+        width 50%
+        rem-fallback( margin, 8px 0 )
+        text-align center
     &:hover
         color wf_nav-color-hover
 
@@ -55,3 +60,6 @@
 // - Links for category
 .linkCategory
     width 33.33%
+    +media-query( screen, max-width 940px )
+        width 100%
+        rem-fallback( margin-bottom, 8px )

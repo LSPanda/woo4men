@@ -13,12 +13,23 @@
 // - Style for my header
 .header__logo, .header__nav-menu
     float left
+.header__logo
+    +media-query( screen, max-width 940px )
+        width 100%
+        rem-fallback( width, 200px )
+    +media-query( screen, max-width 590px )
+        display none
 .header__nav-menu
     rem-fallback( margin-top, 8px )
-
+    +media-query( screen, max-width 940px )
+        float none
 .header__login-panier, .header__search
     float right
     text-align right
+.header__search
+    +media-query( screen, max-width 940px )
+        float none
+        display block
 
 .header__panier
     position relative

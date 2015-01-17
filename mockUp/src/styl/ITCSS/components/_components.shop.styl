@@ -19,6 +19,10 @@
     width 25%
     rem-fallback( padding, 0 26px )
     rem-fallback( margin, 8px 0 )
+    +media-query( screen, max-width 940px )
+        width 50%
+    +media-query( screen, max-width 590px )
+        width 100%
 .address__map
     rem-fallback( margin, 24px 0 0 12px)
 

@@ -16,6 +16,10 @@
     rem-fallback( margin-bottom, 24px )
     rem-fallback( padding, 12px 24px )
     transition( all, 0.25s )
+    +media-query( screen, max-width 940px )
+        width 50%
+    +media-query( screen, max-width 590px )
+        width 100%
     &:hover
         background: wf_background-boxes
 .article__title

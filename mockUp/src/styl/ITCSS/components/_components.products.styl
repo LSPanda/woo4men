@@ -13,12 +13,20 @@
 // - Style for my products
 .product
     width 75%
+    +media-query( screen, max-width 940px )
+        width 100%
+        rem-fallback( margin-bottom, 32px )
 .product__img
     width 40%
     rem-fallback( padding-right, 20px )
+    +media-query( screen, max-width 590px )
+        width 100%
+        rem-fallback( margin-bottom, 32px )
 .product__detail
     width 60%
     rem-fallback( padding, 0 24px )
+    +media-query( screen, max-width 590px )
+        width 100%
 
 .body__list
     rem-fallback( margin-bottom, 24px )
@@ -44,3 +52,11 @@
 .same
     width 25%
     rem-fallback( padding, 0 20px )
+    +media-query( screen, max-width 940px )
+        width 100%
+.same__article
+    width 100%
+    +media-query( screen, max-width 940px )
+        width 33.33%
+    +media-query( screen, max-width 590px )
+        width 100%

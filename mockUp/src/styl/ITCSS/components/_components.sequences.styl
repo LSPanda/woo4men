@@ -16,6 +16,10 @@
 .sequence__path
     rem-fallback( width, 800px )
     margin 52px auto 0
+    +media-query( screen, max-width 940px )
+        rem-fallback( width, 400px )
+    +media-query( screen, max-width 590px )
+        rem-fallback( width, 200px )
     &:before
         content ""
         display block
@@ -24,6 +28,10 @@
 .path__element
     rem-fallback( width, 200px )
     rem-fallback( height, 60px )
+    +media-query( screen, max-width 940px )
+        rem-fallback( width, 100px )
+    +media-query( screen, max-width 590px )
+        rem-fallback( width, 50px )
 .element__ball
     rem-fallback( width, 20px )
     rem-fallback( height, 20px )
@@ -31,6 +39,10 @@
     rem-fallback( margin, 15px 70px )
     border-radius( 10px )
     text-indent -9999px
+    +media-query( screen, max-width 940px )
+        rem-fallback( margin, 15px 35px )
+    +media-query( screen, max-width 590px )
+        rem-fallback( margin, 15px 17.5px )
 .element__ball--links
     background wf_background-pathLink
 .element__circle
@@ -40,6 +52,10 @@
     border 2px solid wf_border-path
     border-radius( 25px )
     text-indent -9999px
+    +media-query( screen, max-width 940px )
+        rem-fallback( margin, 0 35px )
+    +media-query( screen, max-width 590px )
+        margin 0
 .element__circle--panier
     background wf_background-color url( "images/links/sprite.png" ) -91.5px -12.5px
 .element__circle--personn

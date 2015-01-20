@@ -8,6 +8,7 @@
 ( function( $ ) {
     "user strict";
 
+    //- Variable for my gMap
     var defaultPosition,
     mapOptions,
     gMap,
@@ -16,6 +17,7 @@
     image,
     addressMag = addressMags;
 
+    //-Function for my gMap
     function generateGoogleMap() {
         //Set position to Bruxelle
         defaultPosition = new google.maps.LatLng( 50.8504500, 4.3487800 );

@@ -27,7 +27,7 @@ block content
             h4(itemprop="headline").delta Liste de vos achats
             p(itemprop="about")
                 | Votre panier contient
-                span.span--spacing 1
+                span#panierTotalArticle.span--spacing 1
                 | produit
             div.listArticles__table
                 table.table
@@ -38,25 +38,26 @@ block content
                         td.table__data--total Quantité
                         td.table__data--price Prix
                     //- Ligne pour article
-                    tr.table__row--border
-                        td.table__data--img 
-                            img(src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").data__img
-                        td.table__data--detail
-                            h5.delta Jolie chemise
-                            p Chemise homme
-                            p Taille :
-                                span.span--spacing M
-                            p Référence de l'article :
-                                span.span--spacing 
-                                    a(href="product.html").woo4menLink 13432453
-                        td.table__data--total
-                            form(action="#")
-                                div.inline-block
-                                    input(type="number" value="1").forms__input--pattern.size__input
-                        td.table__data--price 
-                            | 99,99€
-                            span.data__price--delete
-                                a(href="#").woo4menLink Supprimer
+                    tr#rowArticle.table__row--border
+                        //-
+                            td.table__data--img 
+                                img(src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").data__img
+                            td.table__data--detail
+                                h5.delta Jolie chemise
+                                p Chemise homme
+                                p Taille :
+                                    span.span--spacing M
+                                p Référence de l'article :
+                                    span.span--spacing 
+                                        a(href="product.html").woo4menLink 13432453
+                            td.table__data--total
+                                form(action="#")
+                                    div.inline-block
+                                        input(type="number" value="1").forms__input--pattern.size__input
+                            td.table__data--price 
+                                | 99,99€
+                                span.data__price--delete
+                                    a(href="#").woo4menLink Supprimer
                     //- Frais de port
                     tr.table__row--border
                         td.table__data--img &nbsp;
@@ -74,7 +75,7 @@ block content
                         td.table__data--img &nbsp;
                         td.table__data--detail &nbsp;
                         td.table__data--total Total
-                        td.table__data--price 106,98€
+                        td#panierTotal.table__data--price 106,98€
         
         div.nextSequence
             a(href="panier-identification.html").removeLink.nextSequence__links Suivant

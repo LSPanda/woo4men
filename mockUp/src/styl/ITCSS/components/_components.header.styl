@@ -26,6 +26,9 @@
 .header__login-panier, .header__search
     float right
     text-align right
+.header__login-panier
+    +media-query( screen, max-width 590px )
+        width 100%
 .header__search
     +media-query( screen, max-width 940px )
         float none
@@ -43,3 +46,5 @@
         rem-fallback( width, 80px )
         rem-fallback( height, 77px )
         background url( "images/links/sprite.png" ) -10px -10px
+        +media-query( screen, max-width 590px )
+            rem-fallback( left, 48px )

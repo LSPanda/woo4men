@@ -52,15 +52,16 @@ td
 .table__data--img
     width 30%
     text-align center
+    +media-query( screen, max-width 590px )
+        width 0%
+        display none
 .data__img
     width 100%
     rem-fallback( max-width, 182px )
     rem-fallback( max-height, 182px )
-    +media-query( screen, max-width 590px )
-        width 0%
-        display none
 .table__data--detail
-    width 50%
+    position relative
+    width 40%
     vertical-align top
     +media-query( screen, max-width 590px )
         width 70%
@@ -68,11 +69,10 @@ td
     width 20%
     vertical-align top
 .table__data--price
-    position relative
-    width 10%
+    width 20%
     text-align right
     vertical-align top
 .data__price--delete
     position absolute
-    right 0
+    rem-fallback( right, 24px )
     rem-fallback( bottom, 14px )

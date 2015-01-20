@@ -8,9 +8,10 @@
 ( function( $ ) {
     "user strict";
 
-    var tableStorage = {},
+    var tableStorage = new Array(),
     jsonTable,
-    nbArticles;
+    nbArticles,
+    total;
 
     //- Connection to my account
     var connection = function( cible ) {
@@ -34,28 +35,15 @@
         var nouveauNb = parseInt( nbArticles ) + 1;
 		$( 'span#nbArticles' ).text( nouveauNb );
         //Take information
-		var titre = $( cible ).find( 'span#productTitle' ).text();
-		var prix = $( cible ).find( '#productPrice' ).text() * quantite;
-		var reference = $( cible ).find( '#productReference' ).text()
-        var taille = $( cible ).find( '#productTaille' ).text()
-		//Cost
-		var total = $( 'span#totalPrice' ).text();
-		var nouveauTotal = parseInt( total ) + parseInt( prix );
-        $('span#totalPrice').text(nouveauTotal);
+		var titre = $( 'span#productTitle' ).text();
+		var img = "../css/images/mockUp/chemise1.png";
+		var prix = $( 'span#productPrice' ).text() * nouveauNb;
+		var reference = $( 'dd#productReference' ).text();
+        var taille = $( 'span#productTaille' ).text();
 		//JSON files
-        tableStorage.push( {'name':titre, 'prix':prix, 'quantite':quantite,'taille':taille, 'reference':reference} );
+        tableStorage.push( { 'name': titre, 'image': img, 'prix': prix, 'quantite': quantite,'taille': taille, 'reference': reference } );
         jsonTable = JSON.stringify(tableStorage);
-		sessionStorage.setItem('panier', jsonTable);
-
-        //Put information
-		$( '<p itemprop="content"><span id="nbArticles" class="span--spacing"></span>article(s) - <span id="totalPrice" class="span--spacing"></span><span class="span--spacing">€</span></p><a itemprop="url" href="html/panier.html" class="woo4menLink">Commander maintenant</a>' )
-			.find( 'span#nbArticles' )
-				.text( nouveauNb )
-				.end()
-			.find( 'span#totalPrice' )
-				.text( prix )
-				.end()
-			.appendTo( 'div.header__panier' );
+		localStorage.setItem('panier', jsonTable);
 	};
 
     $( function() {
@@ -65,8 +53,8 @@
 		} );
         //Add article
         $( 'input#addArticle' ).click( function( e ){
-			e.preventDefault();
-            ajouterPanierForm( this );
+            e.preventDefault();
+			ajouterPanierForm( this );
 		});
         //Check Login
         if( sessionStorage.getItem( 'identifiant' ) ) {
@@ -77,44 +65,43 @@
 					.end()
 		}
         //Panier
-        if( sessionStorage.getItem( 'panier' ) ) {
-			tableStorage = JSON.parse( sessionStorage.getItem( 'panier' ) );
-			var total = 0;
-			for( i in tableStorage ) {
-				$( 'span#nbArticles' ).text( tableStorage.length );
-				total += parseFloat( tableStorage[i].prix );
-				$( 'span#totalPrice' ).text( total );
-				$( '<p itemprop="content"><span id="nbArticles" class="span--spacing"></span>article(s) - <span id="totalPrice" class="span--spacing"></span><span class="span--spacing">€</span></p><a itemprop="url" href="html/panier.html" class="woo4menLink">Commander maintenant</a>' )
-        			.find( 'span#nbArticles' )
-        				.text( tableStorage[i].quantite )
-        				.end()
-        			.find( 'span#totalPrice' )
-        				.text( tableStorage[i].prix )
-        				.end()
-        			.appendTo( 'div.header__panier' );
-			}
+        if( localStorage.getItem( 'panier' ) ) {
+			tableStorage = JSON.parse( localStorage.getItem( 'panier' ) );
+
+			$( 'div.header__panier' )
+    			.find( 'span#nbArticles' )
+    				.text( tableStorage.length )
+    				.end()
+    			.find( 'span#totalPrice' )
+    				.text( tableStorage.length * 25 )
+    				.end()
 
 			if( document.getElementById( 'myPanier' ) ) {
+                tableStorage = JSON.parse( localStorage.getItem( 'panier' ) );
+
 				for( i in tableStorage ) {
 					$( 'span#panierTotalArticle' ).text( tableStorage.length );
-					total += parseFloat( tableStorage[i].prix );
-					$( 'span#panierTotal' ).text( total );
-					$('<td class="table__data--img panier__image">
-                            <img src=""../css/images/mockUp/chemise.png">
-                        </td>
-                        <td class="table__data--detail panier__details">
-                            <h5 id="titleArticle" class="delta"></h5>
-                            <p>Taille :<span id="tailleArticle" class="span--spacing"></span></p>
-                            <p>Référence de l\'article :<span class="span--spacing"> <a id="referenceArticle" href="product.html" class="woo4menLink"></a></span></p>
-                        </td>
-                        <td class="table__data--total panier__number">
-                            <form action="#">
-                                <div class="inline-block">
-                                    <input type="number" value="1" class="forms__input--pattern size__input">
-                                </div></form></td>
-                        <td id="priceArticle" class="table__data--price panier__price">
-                            <span class="data__price--delete"><a href="#" class="woo4menLink">Supprimer</a></span>
-                        </td>')
+					$( 'td#panierPrix' ).text( tableStorage.length * 25 + " €");
+					$( 'td#panierTotal' ).text( tableStorage.length * 25 + 6 + " €" );
+
+					$('<tr id="rowArticle" class="table__row--border">
+                            <td class="table__data--img panier__image">
+                                <img src="../css/images/mockUp/chemise.png">
+                            </td>
+                            <td class="table__data--detail panier__details">
+                                <h5 id="titleArticle" class="delta"></h5>
+                                <p>Taille :<span id="tailleArticle" class="span--spacing"></span></p>
+                                <p>Référence de l\'article :<span class="span--spacing"> <a id="referenceArticle" href="product.html" class="woo4menLink"></a></span></p>
+                                <span class="data__price--delete"><a id="deleteItem" href="#" class="woo4menLink">Supprimer</a></span>
+                            </td>
+                            <td class="table__data--total panier__number">
+                                <form action="#">
+                                    <div class="inline-block">
+                                        <input type="number" value="1" class="forms__input--pattern size__input">
+                                    </div></form></td>
+                            <td id="priceArticle" class="table__data--price panier__price">
+                            </td>
+                        </tr>')
 						.find( 'h5#titleArticle' )
 							.text(tableStorage[i].name)
 							.end()
@@ -125,9 +112,9 @@
 							.text(tableStorage[i].reference)
 							.end()
 						.find('td#priceArticle')
-							.text(tableStorage[i].prix)
+							.text(tableStorage[i].prix + "€")
 							.end()
-						.appendTo('tr#rowArticle');
+						.appendTo('tbody#listPanier');
 				}
 			}
 		}

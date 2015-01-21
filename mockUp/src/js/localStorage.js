@@ -37,13 +37,13 @@
         //Take information
 		var titre = $( 'span#productTitle' ).text();
 		var img = "../css/images/mockUp/chemise1.png";
-		var prix = $( 'span#productPrice' ).text() * nouveauNb;
+		var prix = $( 'span#productPrice' ).text();
 		var reference = $( 'dd#productReference' ).text();
         var taille = $( 'span#productTaille' ).text();
 		//JSON files
-        tableStorage.push( { 'name': titre, 'image': img, 'prix': prix, 'quantite': quantite,'taille': taille, 'reference': reference } );
-        jsonTable = JSON.stringify(tableStorage);
-		localStorage.setItem('panier', jsonTable);
+        tableStorage.push( { 'name': titre, 'image': img, 'prix': prix, 'quantite': quantite,'taille': taille, 'reference': reference, 'prixTotal': prixTotal } );
+        jsonTable = JSON.stringify( tableStorage );
+		localStorage.setItem( 'panier', jsonTable );
 	};
 
     $( function() {
@@ -67,13 +67,14 @@
         //Panier
         if( localStorage.getItem( 'panier' ) ) {
 			tableStorage = JSON.parse( localStorage.getItem( 'panier' ) );
-
-			$( 'div.header__panier' )
+			var prixTotal = tableStorage.length * 25;
+            console.log( tableStorage.titre );
+            $( 'div.header__panier' )
     			.find( 'span#nbArticles' )
     				.text( tableStorage.length )
     				.end()
     			.find( 'span#totalPrice' )
-    				.text( tableStorage.length * 25 )
+    				.text( prixTotal )
     				.end()
 
 			if( document.getElementById( 'myPanier' ) ) {

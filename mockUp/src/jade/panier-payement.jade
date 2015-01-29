@@ -10,39 +10,97 @@ block header
 
 block content
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Information sur le paiement
-        section.sequence
-            h4.gamma Moyen de paiement
+        div.sequence
+            h2.gamma Séquence d'achat - Paiement
             div.block.sequence__path
                 div.inline-block.path__element
                     a(itemprop="url" href="panier.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
+                        span(itemprop="name").block.element__circle.element__circle--panier Votre panier
                 div.inline-block.path__element
                     a(itemprop="url" href="panier-identification.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Identifiez-vous
+                        span(itemprop="name").block.element__circle.element__circle--personn Identifiez-vous
                 div.inline-block.path__element
                     a(itemprop="url" href="panier-address.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Adresse
+                        span(itemprop="name").block.element__circle.element__circle--address Adresse
                 div.inline-block.path__element
                     span(itemprop="name").block.element__circle.element__circle--bill Paiement
         
-        section#myPanier.panier
-            h4(itemprop="headline").delta Choisissez votre méthode de paiement
-            p(itemprop="about")
-                | Merci de choisir votre moyen de paiement afin de régler la somme de
-                span.hightlight.span--spacing 106,98€
-            div.inline-block.paiement
-                a(href="#").removeLink
-                    h5.epsilon Virement bancaire
-                    img(src="../css/images/links/virement.png", alt="Logo des virements bancaires")
-            div.inline-block.paiement
-                a(href="#").removeLink
-                    h5.epsilon Paypal 
-                    img(src="../css/images/links/paypal.png", alt="Logo de Paypal")
-            div.inline-block.paiement
-                a(href="#").removeLink    
-                    h5.epsilon Carte bancaire
-                    img(src="../css/images/links/visa.png", alt="Logo des cartes bancaire")
+        div#myPanier.panier
+            section
+                h3(itemprop="headline").delta Liste de vos achats
+                p(itemprop="about")
+                    | Votre panier contient
+                    span#panierTotalArticle.span--spacing 0
+                    | produit
+                div.listArticles__table
+                    table.table
+                        //- Première ligne
+                        tr.table__row--header
+                            td.table__data--img &nbsp;
+                            td.table__data--detail Article
+                            td.table__data--total Quantité
+                            td.table__data--price Prix
+                        //- Ligne pour article
+                        tbody#listPanier   
+                        tr#rowArticle.table__row--border
+                            section
+                                h4.hiddenTitle Jolie chemise
+                                td.table__data--img 
+                                    img(src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").data__img
+                                td.table__data--detail
+                                    p.delta Jolie chemise
+                                    p Chemise homme
+                                    p Taille :
+                                        span.span--spacing M
+                                    p Référence de l'article :
+                                        span.span--spacing 
+                                            a(href="product.html").woo4menLink 13432453
+                                td.table__data--total
+                                    form(action="#")
+                                        div.inline-block
+                                            input(type="number" value="1").forms__input--pattern.size__input
+                                td.table__data--price 
+                                    | 99,99€
+                                    span.data__price--delete
+                                        a(href="#").woo4menLink Supprimer
+                        //- Frais de port
+                        tr.table__row--border
+                            td.table__data--img &nbsp;
+                            td.table__data--detail &nbsp;
+                            td.table__row--header.table__data--total Frais de port
+                            td.table__data--price 6 €
+                        //- Montant Article
+                        tr.table__row--border
+                            td.table__data--img &nbsp;
+                            td.table__data--detail &nbsp;
+                            td.table__row--header.table__data--total Montant Article
+                            td#panierPrix.table__data--price
+                                span.span--spacing €
+                        //- Montant total
+                        tr.table__row--footer.table__row--boldBorder
+                            td.table__data--img &nbsp;
+                            td.table__data--detail &nbsp;
+                            td.table__data--total Total
+                            td#panierTotal.table__data--price
+                                span.span--spacing € 
+            
+            section.alpha-spacing--before.beta-spacing--after
+                h3(itemprop="headline").delta Choisissez votre méthode de paiement
+                p(itemprop="about")
+                    | Merci de choisir votre moyen de paiement afin de régler la somme de
+                    span.hightlight.span--spacing 106,98€
+                section.inline-block.paiement
+                    a(href="#").removeLink
+                        h4.epsilon Virement bancaire
+                        img(src="../css/images/links/virement.png", alt="Logo des virements bancaires")
+                section.inline-block.paiement
+                    a(href="#").removeLink
+                        h4.epsilon Paypal 
+                        img(src="../css/images/links/paypal.png", alt="Logo de Paypal")
+                section.inline-block.paiement
+                    a(href="#").removeLink    
+                        h4.epsilon Carte bancaire
+                        img(src="../css/images/links/visa.png", alt="Logo des cartes bancaire")
             
 block footer
     include includes/footer.jade

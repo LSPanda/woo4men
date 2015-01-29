@@ -12,12 +12,12 @@ block content
     - var numberItem = 0
     
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Page catégorie de Woo4men
+        h2(itemprop="headline").hiddenTitle Nos chemises pour femme
         while numberItem < 8
-            section(itemscope itemtype="http://schema.org/Product").inline-block.article
+            article(itemscope itemtype="http://schema.org/Product").inline-block.article
                 a(itemprop="url" href="product.html").removeLink
                     div.article__title
-                        h4(itemprop="name").gamma Chemise
+                        h3(itemprop="name").gamma Chemise
                     div.article__img
                         img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
                     div.article__body

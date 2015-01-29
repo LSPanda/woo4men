@@ -10,13 +10,12 @@ block header
 
 block content
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Connection à votre compte
-        section.sequence
-            h4(itemprop="headline").gamma Connectez-vous - Créer un compte
+        div.sequence
+            h2(itemprop="headline").gamma Séquence d'achat - Votre comtpe
             div.block.sequence__path
                 div.inline-block.path__element
                     a(itemprop="url" href="panier.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
+                        span(itemprop="name").block.element__circle.element__circle--panier Votre panier
                 div.inline-block.path__element
                     span(itemprop="name").block.element__circle.element__circle--personn Identifiez-vous
                 div.inline-block.path__element
@@ -25,7 +24,7 @@ block content
                     span(itemprop="name").block.element__ball Paiement    
         
         section.inline-block.panier.panier__forms
-            h4(itemprop="headline").delta Créez votre compte
+            h3(itemprop="headline").delta Créez votre compte
             p(itemprop="about") Entrez votre adresse e-mail pour créer un compte.
             form.form
                 div.inline-block.form__element--fullSize
@@ -35,7 +34,7 @@ block content
                     a(href="panier-inscription.html").block.removeLink.inscription__submit Créez votre compte
         
         section.inline-block.panier.panier__forms
-            h4(itemprop="headline").delta Déjà enregistré&nbsp;?
+            h3(itemprop="headline").delta Déjà enregistré&nbsp;?
             p(itemprop="about") Entrez votre adresse e-mail et mot de passe pour vous connecter.
             form.form
                 div.inline-block.form__element--fullSize

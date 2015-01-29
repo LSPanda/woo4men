@@ -10,18 +10,17 @@ block header
 
 block content
     section.beta-spacing--before.alpha-spacing--after.clearfix
-        h3.hiddenTitle Page des magasins
-        section(itemscope itemtype="http://schema.org/Map")
-            h4(itemprop="headline").gamma Localiser nos magasins
+        div(itemscope itemtype="http://schema.org/Map")
+            h2(itemprop="headline").gamma Localiser nos magasins
             div(itemprop="mapType")#gmap.block.map__position
         section(itemscope itemtype="http://schema.org/ClothingStore").beta-spacing--before
             - var numberItem = 0
-            h4(itemprop="headline").gamma Nos adresses
+            h3(itemprop="headline").gamma Nos adresses
             while numberItem < 8
-                div.inline-block.address__details
+                article.inline-block.address__details
                     div.inline-block
                         div.address__title
-                            h5(itemprop="brand").epsilon Au fuseau
+                            h4(itemprop="brand").epsilon Au fuseau
                         div.address__info
                             div
                                 span(itemprop="address").block Rue Rogier 80, Namur

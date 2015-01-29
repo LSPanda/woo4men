@@ -10,10 +10,10 @@ block header
 
 block content
     section(itemscope itemtype="http://schema.org/Product").beta-spacing--before.beta-spacing--after.clearfix
-        h3(itemprop="headline").hiddenTitle Page produit de Woo4men
-        section.inline-block.product
-            h4(itemprop="headline").hiddenTitle Aperçu des chemises
-            div.inline-block.product__img
+        h2(itemprop="headline").hiddenTitle Commander notre chemise
+        div.inline-block.product
+            article.inline-block.product__img
+                h3(itemprop="headline").hiddenTitle Aperçu de la chemise
                 div.one-whole
                     img(itemprop="image" src="../css/images/mockUp/chemise1.png", alt="Presentation d'une chemise").one-whole
                 div.gamma-spacing--before
@@ -23,16 +23,16 @@ block content
                         img(itemprop="image" src="../css/images/mockUp/chemise2.png", alt="Presentation d'une chemise").one-whole
                     div.inline-block.one-third
                         img(itemprop="image" src="../css/images/mockUp/chemise3.png", alt="Presentation d'une chemise").one-whole
-            div.inline-block.product__detail
+            article.inline-block.product__detail
                 div.detail__title
-                    h4(itemprop="name").delta
-                        span#productTitle Chemise
-                        span.span--spacing -
-                        span#productPrice.span--spacing.detail__price 25
-                        span.span--spacing €
+                    h3(itemprop="name").delta
+                        span#productTitle Chemise 
+                        spang à 
+                        span#productPrice.span--spacing.detail__price 25 
+                        span €
                 div.detail__body
                     p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque iusto blanditiis labore consequatur earum reiciendis tempore doloremque magnam harum nulla deserunt autem illo, corrupti minima maxime asperiores dolores, dolorum fugiat.
-                div.information__title
+                article.information__title
                     h4(itemprop="headline").delta À savoir
                 div.information__body
                     dl.body__list
@@ -42,7 +42,7 @@ block content
                         dd 100% coton                        
                         dt(itemprop="review").body__list--italic Référence :&nbsp;
                         dd#productReference 133146736373
-                div.size__title
+                article.size__title
                     h4(itemprop="headline").delta Taille
                 div.size__choices
                     span(itemprop="weight").size__choices--button S
@@ -50,24 +50,25 @@ block content
                     span(itemprop="weight").size__choices--button L
                     span(itemprop="weight")#productTaille.size__choices--button.choice__button--focus XL
                     span(itemprop="weight").size__choices--button XXL
-                div.size__forms
+                article.size__forms
+                    h4(itemprop="headline").hiddenTitle Commander
                     form(action="#")
                         div.inline-block
                             input(type="number" value="1")#quantite.forms__input--pattern.size__input
                         div.inline-block
                             input(type="submit" value="Commander")#addArticle.form__submit.size__submit
-        section.inline-block.same
-            div.same__title
-                - var numberItem = 0
-                h4(itemprop="headline").delta Dans la même catégorie
-                while numberItem < 2
-                    section(itemscope itemtype="http://schema.org/Product").inline-block.article.same__article
-                        a(itemprop="url" href="product.html").removeLink
-                            div.article__title
-                                h5(itemprop="name").gamma Chemise
-                            div.article__img
-                                img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
-                    - numberItem++
+    section.same
+        div.same__title
+            - var numberItem = 0
+            h2(itemprop="headline").delta Dans la même catégorie
+            while numberItem < 2
+                article(itemscope itemtype="http://schema.org/Product").inline-block.article.same__article
+                    a(itemprop="url" href="product.html").removeLink
+                        div.article__title
+                            h3(itemprop="name").gamma Chemise
+                        div.article__img
+                            img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
+                - numberItem++
 
 block footer
     include includes/footer.jade

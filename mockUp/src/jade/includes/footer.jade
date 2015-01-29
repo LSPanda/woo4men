@@ -1,38 +1,38 @@
 //- includes/footer.jade
 footer(itemscope itemtype="http://schema.org/WPFooter").band--top
-    h6(itemprop="headline").hiddenTitle Pied de page de Woo4men
-    div.footer__nav-signature.beta-spacing--before
-        div(itemscope itemtype="http://schema.org/SiteNavigationElement").footer__nav-menu
-            //- Change link path
-            if current.accueil
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="html/category-men.html").navigation__footer Promotions
-            else 
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="category-men.html").navigation__footer Promotions
-            //- Change link path
-            if current.accueil
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="html/category-men.html").navigation__footer Nouveaux produits
-            else 
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="category-men.html").navigation__footer Nouveaux produits
-            //- Change link path
-            if current.accueil
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="html/shop.html").navigation__footer Nos magasins
-            else 
-                span(itemprop="keywords").navigationElement__footer
-                    a(itemprop="url" href="shop.html").navigation__footer Nos magasins
-            //- Change link path
-            if current.accueil
-                span(itemprop="keywords")
-                    a(itemprop="url" href="html/contact.html").navigation__footer Contactez-nous
-            else 
-                span(itemprop="keywords")
-                    a(itemprop="url" href="contact.html").navigation__footer Contactez-nous
-                    
-        div(itemscope itemtype="http://schema.org/Person").footer__signature
-            p(itemprop="givenName") 
-                | &copy; Designed by  
-                a(itemprop="url" href="http://portfolio.simon-leyder.be").woo4menLink Simon Leyder 
+        div.footer__nav-signature.beta-spacing--before
+            section(itemscope itemtype="http://schema.org/SiteNavigationElement").footer__nav-menu
+                h2(itemprop="headline").hiddenTitle Navigation rapide
+                //- Change link path
+                if current.accueil
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="html/category-men.html").navigation__footer Promotions
+                else 
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="category-men.html").navigation__footer Promotions
+                //- Change link path
+                if current.accueil
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="html/category-men.html").navigation__footer Nouveaux produits
+                else 
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="category-men.html").navigation__footer Nouveaux produits
+                //- Change link path
+                if current.accueil
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="html/shop.html").navigation__footer Nos magasins
+                else 
+                    span(itemprop="keywords").navigationElement__footer
+                        a(itemprop="url" href="shop.html").navigation__footer Nos magasins
+                //- Change link path
+                if current.accueil
+                    span(itemprop="keywords")
+                        a(itemprop="url" href="html/contact.html").navigation__footer Contactez-nous
+                else 
+                    span(itemprop="keywords")
+                        a(itemprop="url" href="contact.html").navigation__footer Contactez-nous
+                        
+            div(itemscope itemtype="http://schema.org/Person").footer__signature
+                p(itemprop="givenName") 
+                    | &copy; Designed by  
+                    a(itemprop="url" href="http://portfolio.simon-leyder.be").woo4menLink Simon Leyder 

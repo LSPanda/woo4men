@@ -1,8 +1,8 @@
 //- includes/header.jade
 header(itemscope itemtype="http://schema.org/WPHeader").band--bottom
+    h1(itemprop="headline").hiddenTitle Woo4men, vente de vêtement en ligne
     div.alpha-spacing--after.clearfix
         div.header__logo
-            h1(itemprop="headline").hiddenTitle Woo4men, vente de vêtement en ligne
             if current.accueil
                 a(itemprop="url" href="index.html")
                     img(itemprop="image" src="css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
@@ -10,14 +10,16 @@ header(itemscope itemtype="http://schema.org/WPHeader").band--bottom
                 a(itemprop="url" href="../index.html")
                     img(itemprop="image" src="../css/images/links/logoNoel.png", alt="Logo spécial Noël de Woo4men")
         div.header__login-panier
-            div.header__login
+            section.header__login
+                h2.hiddenTitle Connection à votre compte
                 p(itemprop="content")
                     | Bienvenue, 
                     if current.accueil
                         a(itemprop="url" href="html/login.html").woo4menLink connectez-vous
                     else
                         a(itemprop="url" href="login.html").woo4menLink connectez-vous
-            div.header__panier.boxes--grey
+            section.header__panier.boxes--grey
+                h2.hiddenTitle Accès à mon panier d'achat
                 p(itemprop="content")
                     span#nbArticles.span--spacing 0 
                     | article(s) - 

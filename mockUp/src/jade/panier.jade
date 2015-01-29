@@ -10,9 +10,8 @@ block header
 
 block content
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Panier d'achat de Woo4men
-        section.sequence
-            h4(itemprop="headline").gamma Récapitulatif de la commande
+        div.sequence
+            h2(itemprop="headline").gamma Séquence d'achat - Mon panier
             div.block.sequence__path
                 div.inline-block.path__element
                     span(itemprop="name").block.element__circle.element__circle--panier Votre panier
@@ -24,7 +23,7 @@ block content
                     span(itemprop="name").block.element__ball Paiement
         
         section#myPanier.panier
-            h4(itemprop="headline").delta Liste de vos achats
+            h3(itemprop="headline").delta Liste de vos achats
             p(itemprop="about")
                 | Votre panier contient
                 span#panierTotalArticle.span--spacing 0
@@ -38,13 +37,14 @@ block content
                         td.table__data--total Quantité
                         td.table__data--price Prix
                     //- Ligne pour article
-                    tbody#listPanier
-                    //-    
-                        tr#rowArticle.table__row--border
+                    tbody#listPanier   
+                    tr#rowArticle.table__row--border
+                        section
+                            h4.hiddenTitle Jolie chemise
                             td.table__data--img 
                                 img(src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").data__img
                             td.table__data--detail
-                                h5.delta Jolie chemise
+                                p.delta Jolie chemise
                                 p Chemise homme
                                 p Taille :
                                     span.span--spacing M

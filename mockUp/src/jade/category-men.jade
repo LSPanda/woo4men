@@ -13,7 +13,8 @@ block content
         div.arrow
             div.arrow-up--color
             div.arrow-up--white
-        div(itemscope itemtype="http://schema.org/SiteNavigationElement").filter__nav-menu.gamma-spacing--after.gamma-spacing--before
+        section(itemscope itemtype="http://schema.org/SiteNavigationElement").filter__nav-menu.gamma-spacing--after.gamma-spacing--before
+            h2.hiddenTitle Affiner votre recherche
             span(itemprop="keywords")
                 a(itemprop="url" href="category-men-chemise.html").navigation__filtre Chemises
             span(itemprop="keywords")
@@ -25,12 +26,12 @@ block content
     - var numberItem = 0
     
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Page catégorie de Woo4men
+        h2(itemprop="headline").hiddenTitle Nos vêtements pour homme
         while numberItem < 4
-            section(itemscope itemtype="http://schema.org/Product").inline-block.article
+            article(itemscope itemtype="http://schema.org/Product").inline-block.article
                 a(itemprop="url" href="product.html").removeLink
                     div.article__title
-                        h4(itemprop="name").gamma Chemise
+                        h3(itemprop="name").gamma Chemise
                     div.article__img
                         img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
                     div.article__body
@@ -41,10 +42,10 @@ block content
                         div.information__price
                             span(itemprop="price").block.information__price--newPrice 33,50 €    
                             span(itemprop="price").block.information__price--oldPrice 50,00 €    
-            section(itemscope itemtype="http://schema.org/Product").inline-block.article
+            article(itemscope itemtype="http://schema.org/Product").inline-block.article
                 a(itemprop="url" href="product.html").removeLink
                     div.article__title
-                        h4(itemprop="name").gamma Pull
+                        h3(itemprop="name").gamma Pull
                     div.article__img
                         img(itemprop="image" src="../css/images/mockUp/pull.png", alt="Présentation d'un pull").one-whole
                     div.article__body
@@ -55,10 +56,10 @@ block content
                         div.information__price
                             span(itemprop="price").block.information__price--newPrice 45,00 €    
                             span(itemprop="price").block.information__price--oldPrice 50,00 €    
-            section(itemscope itemtype="http://schema.org/Product").inline-block.article
+            article(itemscope itemtype="http://schema.org/Product").inline-block.article
                 a(itemprop="url" href="product.html").removeLink
                     div.article__title
-                        h4(itemprop="name").gamma Polo
+                        h3(itemprop="name").gamma Polo
                     div.article__img
                         img(itemprop="image" src="../css/images/mockUp/polo.png", alt="Présentation d'un polo").one-whole
                     div.article__body

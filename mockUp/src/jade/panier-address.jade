@@ -10,23 +10,22 @@ block header
 
 block content
     section(itemscope itemtype="http://schema.org/thing").beta-spacing--before.beta-spacing--after
-        h3(itemprop="headline").hiddenTitle Indiquer votre adresse
-        section.sequence
-            h4(itemprop="headline").gamma Confirmer votre adresse
+        div.sequence
+            h2(itemprop="headline").gamma Séquence d'achat - Confirmer votre adresse
             div.block.sequence__path
                 div.inline-block.path__element
                     a(itemprop="url" href="panier.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Votre panier
+                        span(itemprop="name").block.element__circle.element__circle--panier Votre panier
                 div.inline-block.path__element
                     a(itemprop="url" href="panier-identification.html").removeLink
-                        span(itemprop="name").block.element__ball.element__ball--links Identifiez-vous
+                        span(itemprop="name").block.element__circle.element__circle--personn Identifiez-vous
                 div.inline-block.path__element
                     span(itemprop="name").block.element__circle.element__circle--address Adresse
                 div.inline-block.path__element
                     span(itemprop="name").block.element__ball Paiement    
         
         section#myPanier.panier
-            h4(itemprop="headline").delta Adresse de livraison
+            h3(itemprop="headline").delta Adresse de livraison
             form.form
                 div.inline-block.form__element
                     label(for="nameAddress").hightlight.label__text

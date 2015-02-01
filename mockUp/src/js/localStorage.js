@@ -11,7 +11,8 @@
     var tableStorage = new Array(),
     jsonTable,
     nbArticles,
-    total;
+    total,
+    prixTotal;
 
     //- Connection to my account
     var connection = function( cible ) {

@@ -13,7 +13,7 @@
         width 100%
         rem-fallback( width, 200px )
     +media-query( screen, max-width 590px )
-        display none
+        rem-fallback( margin-bottom, 24px )
 .header__nav-menu
     rem-fallback( margin-top, 8px )
     +media-query( screen, max-width 940px )
@@ -42,4 +42,4 @@
         rem-fallback( height, 77px )
         background url( "images/links/sprite.png" ) -10px -10px
         +media-query( screen, max-width 590px )
-            rem-fallback( left, 48px )
+            rem-fallback( left, -16px )

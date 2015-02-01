@@ -56,6 +56,23 @@
 // - Links for category
 .linkCategory
     width 33.33%
+    &:hover
+        opacity 0.8
+        transition( all, 0.25s )
     +media-query( screen, max-width 940px )
         width 100%
         rem-fallback( margin-bottom, 8px )
+.linkCategory__figure
+    position relative
+.linkCategory__figcaption
+    display block
+    width 100%
+    position absolute
+    bottom 0
+    right 0
+    font-family wf_font-heading
+    rem-fallback( font-size, 20px )
+    color wf_figcation
+    rem-fallback( padding, 8px 0 )
+    background wf_background-figcaption
+    text-align center

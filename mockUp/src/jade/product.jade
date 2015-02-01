@@ -25,7 +25,7 @@ block content
                         img(itemprop="image" src="../css/images/mockUp/chemise3.png", alt="Presentation d'une chemise").one-whole
             article.inline-block.product__detail
                 div.detail__title
-                    h3(itemprop="name").delta
+                    h3(itemprop="name").gamma
                         span#productTitle Chemise 
                         spang à 
                         span#productPrice.span--spacing.detail__price 25 
@@ -57,15 +57,15 @@ block content
                             input(type="number" value="1")#quantite.forms__input--pattern.size__input
                         div.inline-block
                             input(type="submit" value="Commander")#addArticle.form__submit.size__submit
-    section.same
+    section.alpha-spacing--before.same
         div.same__title
             - var numberItem = 0
-            h2(itemprop="headline").delta Dans la même catégorie
+            h2(itemprop="headline").gamma Dans la même catégorie
             while numberItem < 2
                 article(itemscope itemtype="http://schema.org/Product").inline-block.article.same__article
                     a(itemprop="url" href="product.html").removeLink
                         div.article__title
-                            h3(itemprop="name").gamma Chemise
+                            h3(itemprop="name").delta Chemise
                         div.article__img
                             img(itemprop="image" src="../css/images/mockUp/chemise.png", alt="Présentation d'une chemise").one-whole
                 - numberItem++
